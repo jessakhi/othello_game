@@ -1,0 +1,136 @@
+\hypertarget{TAD__Pion_8h}{}\doxysection{Référence du fichier include/\+TAD\+\_\+\+Pion.h}
+\label{TAD__Pion_8h}\index{include/TAD\_Pion.h@{include/TAD\_Pion.h}}
+
+
+Implementation du TAD \mbox{\hyperlink{structPion}{Pion}} pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Position.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Couleur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de TAD\+\_\+\+Pion.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{TAD__Pion_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TAD__Pion_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPion}{Pion}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structPion}{Pion}} permet de représenter un pion à partir de sa couleur et sa position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{TAD__Pion_8h_a7b85f326bc535424faafd772f5dc6c02}\label{TAD__Pion_8h_a7b85f326bc535424faafd772f5dc6c02}} 
+\mbox{\hyperlink{structPion}{Pion}} {\bfseries TADPion\+\_\+pion} (\mbox{\hyperlink{structCouleur}{Couleur}} couleur, \mbox{\hyperlink{structPosition}{Position}} pos)
+\item 
+\mbox{\Hypertarget{TAD__Pion_8h_a822a63390ca48bb76a05819ca10a08f4}\label{TAD__Pion_8h_a822a63390ca48bb76a05819ca10a08f4}} 
+\mbox{\hyperlink{structPosition}{Position}} {\bfseries TADPion\+\_\+obtenir\+Position} (\mbox{\hyperlink{structPion}{Pion}} pion)
+\item 
+\mbox{\hyperlink{structCouleur}{Couleur}} \mbox{\hyperlink{TAD__Pion_8h_a903597d5df3f6aa8a6fb132795620e32}{TADPion\+\_\+obtenir\+Couleur}} (\mbox{\hyperlink{structPion}{Pion}} pion)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de retourner la couleur d\textquotesingle{}un poin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Pion_8h_aec843575e19395f3cecc0fabbd52c34a}\label{TAD__Pion_8h_aec843575e19395f3cecc0fabbd52c34a}} 
+void {\bfseries TADPion\+\_\+changer\+Couleur} (\mbox{\hyperlink{structPion}{Pion}} $\ast$pion)
+\item 
+bool \mbox{\hyperlink{TAD__Pion_8h_a8f62f93291d6b9d06b92b4773dae1754}{TADPion\+\_\+est\+Place}} (\mbox{\hyperlink{structPion}{Pion}} pion)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de savoir si un pion est placé \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Pion_8h_a61c0182e93ddc5cad612a81f98da759d}{TADPion\+\_\+fixer\+Couleur}} (\mbox{\hyperlink{structPion}{Pion}} $\ast$pion, \mbox{\hyperlink{structCouleur}{Couleur}} couleur)
+\begin{DoxyCompactList}\small\item\em Procédure pour fixer la couleur d\textquotesingle{}un pion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Pion_8h_ae1a38dbc87597580aadcd39ed366c8ea}{TADPion\+\_\+placer\+Pion}} (\mbox{\hyperlink{structPion}{Pion}} pion)
+\begin{DoxyCompactList}\small\item\em Procédure qui permet d\textquotesingle{}indiquer au programme que le pion a été placé \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du TAD \mbox{\hyperlink{structPion}{Pion}} pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{TAD__Pion_8h_a8f62f93291d6b9d06b92b4773dae1754}\label{TAD__Pion_8h_a8f62f93291d6b9d06b92b4773dae1754}} 
+\index{TAD\_Pion.h@{TAD\_Pion.h}!TADPion\_estPlace@{TADPion\_estPlace}}
+\index{TADPion\_estPlace@{TADPion\_estPlace}!TAD\_Pion.h@{TAD\_Pion.h}}
+\doxysubsubsection{\texorpdfstring{TADPion\_estPlace()}{TADPion\_estPlace()}}
+{\footnotesize\ttfamily bool TADPion\+\_\+est\+Place (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPion}{Pion}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de savoir si un pion est placé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pion} & \+: le pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Pion_8h_a61c0182e93ddc5cad612a81f98da759d}\label{TAD__Pion_8h_a61c0182e93ddc5cad612a81f98da759d}} 
+\index{TAD\_Pion.h@{TAD\_Pion.h}!TADPion\_fixerCouleur@{TADPion\_fixerCouleur}}
+\index{TADPion\_fixerCouleur@{TADPion\_fixerCouleur}!TAD\_Pion.h@{TAD\_Pion.h}}
+\doxysubsubsection{\texorpdfstring{TADPion\_fixerCouleur()}{TADPion\_fixerCouleur()}}
+{\footnotesize\ttfamily void TADPion\+\_\+fixer\+Couleur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPion}{Pion}} $\ast$}]{pion,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Procédure pour fixer la couleur d\textquotesingle{}un pion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pion} & \+: le pion \\
+\hline
+{\em couleur} & \+: la couleur à fixer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TAD__Pion_8h_a903597d5df3f6aa8a6fb132795620e32}\label{TAD__Pion_8h_a903597d5df3f6aa8a6fb132795620e32}} 
+\index{TAD\_Pion.h@{TAD\_Pion.h}!TADPion\_obtenirCouleur@{TADPion\_obtenirCouleur}}
+\index{TADPion\_obtenirCouleur@{TADPion\_obtenirCouleur}!TAD\_Pion.h@{TAD\_Pion.h}}
+\doxysubsubsection{\texorpdfstring{TADPion\_obtenirCouleur()}{TADPion\_obtenirCouleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCouleur}{Couleur}} TADPion\+\_\+obtenir\+Couleur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPion}{Pion}}}]{pion }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de retourner la couleur d\textquotesingle{}un poin. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: la position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCouleur}{Couleur}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Pion_8h_ae1a38dbc87597580aadcd39ed366c8ea}\label{TAD__Pion_8h_ae1a38dbc87597580aadcd39ed366c8ea}} 
+\index{TAD\_Pion.h@{TAD\_Pion.h}!TADPion\_placerPion@{TADPion\_placerPion}}
+\index{TADPion\_placerPion@{TADPion\_placerPion}!TAD\_Pion.h@{TAD\_Pion.h}}
+\doxysubsubsection{\texorpdfstring{TADPion\_placerPion()}{TADPion\_placerPion()}}
+{\footnotesize\ttfamily void TADPion\+\_\+placer\+Pion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPion}{Pion}}}]{pion }\end{DoxyParamCaption})}
+
+
+
+Procédure qui permet d\textquotesingle{}indiquer au programme que le pion a été placé 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pion} & \+: le pion \\
+\hline
+\end{DoxyParams}

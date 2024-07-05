@@ -1,0 +1,112 @@
+\hypertarget{TAD__Coup_8h}{}\doxysection{Référence du fichier include/\+TAD\+\_\+\+Coup.h}
+\label{TAD__Coup_8h}\index{include/TAD\_Coup.h@{include/TAD\_Coup.h}}
+
+
+Implementation du TAD \mbox{\hyperlink{structCoup}{Coup}} pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Pion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de TAD\+\_\+\+Coup.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{TAD__Coup_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TAD__Coup_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCoup}{Coup}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structCoup}{Coup}} est un pion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCoup}{Coup}} \mbox{\hyperlink{TAD__Coup_8h_a4fd2b462cfacbc388aac2aeaadc2fdc5}{TADCoup\+\_\+coup}} (\mbox{\hyperlink{structPion}{Pion}} pion)
+\begin{DoxyCompactList}\small\item\em Fonction qui creer un coup à partir d un pion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coup_8h_a45ee4a8b7f62ca4637c53306b2116911}{TADCoup\+\_\+jouer\+Coup}} (\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$p, \mbox{\hyperlink{structCoup}{Coup}} coup)
+\begin{DoxyCompactList}\small\item\em Fonction qui place un pion sur le plateau. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPion}{Pion}} \mbox{\hyperlink{TAD__Coup_8h_a53600c2789e5df487e82746cdd5965f9}{TADCoup\+\_\+obtenir\+Pion}} (\mbox{\hyperlink{structCoup}{Coup}} coup)
+\begin{DoxyCompactList}\small\item\em Fonction qui obtient le pion associé au coup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du TAD \mbox{\hyperlink{structCoup}{Coup}} pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{TAD__Coup_8h_a4fd2b462cfacbc388aac2aeaadc2fdc5}\label{TAD__Coup_8h_a4fd2b462cfacbc388aac2aeaadc2fdc5}} 
+\index{TAD\_Coup.h@{TAD\_Coup.h}!TADCoup\_coup@{TADCoup\_coup}}
+\index{TADCoup\_coup@{TADCoup\_coup}!TAD\_Coup.h@{TAD\_Coup.h}}
+\doxysubsubsection{\texorpdfstring{TADCoup\_coup()}{TADCoup\_coup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoup}{Coup}} TADCoup\+\_\+coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPion}{Pion}}}]{pion }\end{DoxyParamCaption})}
+
+
+
+Fonction qui creer un coup à partir d un pion. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pion} & \+: le pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoup}{Coup}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coup_8h_a45ee4a8b7f62ca4637c53306b2116911}\label{TAD__Coup_8h_a45ee4a8b7f62ca4637c53306b2116911}} 
+\index{TAD\_Coup.h@{TAD\_Coup.h}!TADCoup\_jouerCoup@{TADCoup\_jouerCoup}}
+\index{TADCoup\_jouerCoup@{TADCoup\_jouerCoup}!TAD\_Coup.h@{TAD\_Coup.h}}
+\doxysubsubsection{\texorpdfstring{TADCoup\_jouerCoup()}{TADCoup\_jouerCoup()}}
+{\footnotesize\ttfamily void TADCoup\+\_\+jouer\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Fonction qui place un pion sur le plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em coup} & \+: le coup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coup_8h_a53600c2789e5df487e82746cdd5965f9}\label{TAD__Coup_8h_a53600c2789e5df487e82746cdd5965f9}} 
+\index{TAD\_Coup.h@{TAD\_Coup.h}!TADCoup\_obtenirPion@{TADCoup\_obtenirPion}}
+\index{TADCoup\_obtenirPion@{TADCoup\_obtenirPion}!TAD\_Coup.h@{TAD\_Coup.h}}
+\doxysubsubsection{\texorpdfstring{TADCoup\_obtenirPion()}{TADCoup\_obtenirPion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPion}{Pion}} TADCoup\+\_\+obtenir\+Pion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Fonction qui obtient le pion associé au coup. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coup} & \+: le coup dont on veut récupérer le pion \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPion}{Pion}} 
+\end{DoxyReturn}

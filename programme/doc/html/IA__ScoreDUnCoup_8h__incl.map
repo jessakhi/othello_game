@@ -1,0 +1,8 @@
+<map id="include/IA_ScoreDUnCoup.h" name="include/IA_ScoreDUnCoup.h">
+<area shape="rect" id="node1" title="Implementation de la fonction qui permet à l IA de calculer le score d&#39;un coup pour le jeu d&#39;Othello." alt="" coords="12,5,203,32"/>
+<area shape="rect" id="node2" href="$TAD__Plateau_8h.html" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$TAD__Pion_8h.html" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="61,155,153,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="90,304,165,331"/>
+<area shape="rect" id="node5" href="$TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="51,229,164,256"/>
+<area shape="rect" id="node6" href="$TAD__Couleur_8h.html" title="Implementation du TAD Couleur pour le jeu d&#39;Othello." alt="" coords="188,229,299,256"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Coup" name="Coup">
+<area shape="rect" id="node1" title="Le type Coup est un pion." alt="" coords="57,184,111,211"/>
+<area shape="rect" id="node2" href="$structPion.html" title="Le type Pion permet de représenter un pion à partir de sa couleur et sa position." alt="" coords="60,95,108,121"/>
+<area shape="rect" id="node3" href="$structCouleur.html" title="Le type Couleur permet de représenter une couleur à partir de d&#39;un booléen (1,0)" alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node4" href="$structPosition.html" title="Le type Position permet de représenter une position." alt="" coords="96,5,165,32"/>
+</map>

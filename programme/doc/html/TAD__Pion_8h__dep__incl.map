@@ -1,0 +1,17 @@
+<map id="include/TAD_Pion.h" name="include/TAD_Pion.h">
+<area shape="rect" id="node1" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="1257,5,1395,32"/>
+<area shape="rect" id="node2" href="$IA__ScoreDUnCoup_8h.html" title="Implementation de la fonction qui permet à l IA de calculer le score d&#39;un coup pour le jeu d&#39;Othello." alt="" coords="5,155,196,181"/>
+<area shape="rect" id="node3" href="$TAD__Coup_8h.html" title="Implementation du TAD Coup pour le jeu d&#39;Othello." alt="" coords="1523,155,1665,181"/>
+<area shape="rect" id="node8" href="$UNIT__GestionPlateau_8h.html" title="Implementation de toutes les procédures et fonction de gestion du plateau." alt="" coords="1625,229,1832,256"/>
+<area shape="rect" id="node9" href="$TAD__Plateau_8h.html" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="981,80,1135,107"/>
+<area shape="rect" id="node4" href="$IA__CoupValide_8h.html" title="Implementation de la fonction qui permet à l IA de vérifier que un coup est bien jouable (valide)" alt="" coords="1235,229,1399,256"/>
+<area shape="rect" id="node5" href="$JEU__Jouer_8h.html" title="Implementation de la fonction jouer, qui permet d&#39;effectuer toutes les étapes nécéssaires à un tour d..." alt="" coords="796,229,939,256"/>
+<area shape="rect" id="node6" href="$JEU__ObtenirCoupH_8h_source.html" title=" " alt="" coords="975,229,1170,256"/>
+<area shape="rect" id="node7" href="$TAD__Coups_8h.html" title="Implementation du TAD Coups pour le jeu d&#39;Othello." alt="" coords="1451,229,1601,256"/>
+<area shape="rect" id="node10" href="$IA__Evaluer_8h.html" title="Implementation de la fonction qui permet à l IA d&#39;evaluer un plateau au sens d&#39;un joueur." alt="" coords="877,155,1020,181"/>
+<area shape="rect" id="node11" href="$IA__MinMax_8h.html" title="Implementation de l&#39;algorithme du MinMax qui maximise le score de l&#39;IA et minimise celui de l&#39;adversa..." alt="" coords="1146,155,1290,181"/>
+<area shape="rect" id="node12" href="$IA__ObtenirCoupIA_8h_source.html" title=" " alt="" coords="1314,155,1498,181"/>
+<area shape="rect" id="node13" href="$IA__ObtenirCoupsPossibles_8h.html" title="Implementation de la fonction qui permet à l IA d&#39;obtenir la liste des coups qu&#39;on peut jouer sur le ..." alt="" coords="221,155,455,181"/>
+<area shape="rect" id="node14" href="$IA__Score_8h.html" title="Implementation de la fonction qui permet à l IA de calculer le score pour le jeu d&#39;Othello." alt="" coords="480,155,612,181"/>
+<area shape="rect" id="node15" href="$JEU__TesterFin_8h_source.html" title=" " alt="" coords="637,155,802,181"/>
+</map>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de include/TAD_Pion.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TAD_Pion.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TAD__Pion_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __PION__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __PION__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Position_8h.html">TAD_Position.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Couleur_8h.html">TAD_Couleur.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structPion.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="structPosition.html">Position</a> position;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="structCouleur.html">Couleur</a> couleur; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">bool</span> estPlace;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="structPion.html">Pion</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="structPion.html">Pion</a> TADPion_pion(<a class="code" href="structCouleur.html">Couleur</a> couleur, <a class="code" href="structPosition.html">Position</a> pos);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="structPosition.html">Position</a> TADPion_obtenirPosition(<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="TAD__Pion_8h.html#a903597d5df3f6aa8a6fb132795620e32">TADPion_obtenirCouleur</a>(<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> TADPion_changerCouleur(<a class="code" href="structPion.html">Pion</a>* pion);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="TAD__Pion_8h.html#a8f62f93291d6b9d06b92b4773dae1754">TADPion_estPlace</a>(<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Pion_8h.html#a61c0182e93ddc5cad612a81f98da759d">TADPion_fixerCouleur</a>(<a class="code" href="structPion.html">Pion</a> *pion, <a class="code" href="structCouleur.html">Couleur</a> couleur);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Pion_8h.html#ae1a38dbc87597580aadcd39ed366c8ea">TADPion_placerPion</a>(<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="ttc" id="aTAD__Couleur_8h_html"><div class="ttname"><a href="TAD__Couleur_8h.html">TAD_Couleur.h</a></div><div class="ttdoc">Implementation du TAD Couleur pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html_a61c0182e93ddc5cad612a81f98da759d"><div class="ttname"><a href="TAD__Pion_8h.html#a61c0182e93ddc5cad612a81f98da759d">TADPion_fixerCouleur</a></div><div class="ttdeci">void TADPion_fixerCouleur(Pion *pion, Couleur couleur)</div><div class="ttdoc">Procédure pour fixer la couleur d'un pion.</div><div class="ttdef"><b>Definition:</b> TAD_Pion.c:45</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html_a8f62f93291d6b9d06b92b4773dae1754"><div class="ttname"><a href="TAD__Pion_8h.html#a8f62f93291d6b9d06b92b4773dae1754">TADPion_estPlace</a></div><div class="ttdeci">bool TADPion_estPlace(Pion pion)</div><div class="ttdoc">Fonction qui permet de savoir si un pion est placé</div><div class="ttdef"><b>Definition:</b> TAD_Pion.c:26</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html_a903597d5df3f6aa8a6fb132795620e32"><div class="ttname"><a href="TAD__Pion_8h.html#a903597d5df3f6aa8a6fb132795620e32">TADPion_obtenirCouleur</a></div><div class="ttdeci">Couleur TADPion_obtenirCouleur(Pion pion)</div><div class="ttdoc">Fonction qui permet de retourner la couleur d'un poin.</div><div class="ttdef"><b>Definition:</b> TAD_Pion.c:30</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html_ae1a38dbc87597580aadcd39ed366c8ea"><div class="ttname"><a href="TAD__Pion_8h.html#ae1a38dbc87597580aadcd39ed366c8ea">TADPion_placerPion</a></div><div class="ttdeci">void TADPion_placerPion(Pion pion)</div><div class="ttdoc">Procédure qui permet d'indiquer au programme que le pion a été placé</div><div class="ttdef"><b>Definition:</b> TAD_Pion.c:49</div></div>
+<div class="ttc" id="aTAD__Position_8h_html"><div class="ttname"><a href="TAD__Position_8h.html">TAD_Position.h</a></div><div class="ttdoc">Implementation du TAD Position pour le jeu d'Othello.</div></div>
+<div class="ttc" id="astructCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de représenter une couleur à partir de d'un booléen (1,0)</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.h:17</div></div>
+<div class="ttc" id="astructPion_html"><div class="ttname"><a href="structPion.html">Pion</a></div><div class="ttdoc">Le type Pion permet de représenter un pion à partir de sa couleur et sa position.</div><div class="ttdef"><b>Definition:</b> TAD_Pion.h:20</div></div>
+<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="structPosition.html">Position</a></div><div class="ttdoc">Le type Position permet de représenter une position.</div><div class="ttdef"><b>Definition:</b> TAD_Position.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

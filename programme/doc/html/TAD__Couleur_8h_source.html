@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de include/TAD_Couleur.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TAD_Couleur.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TAD__Couleur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __COULEUR__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __COULEUR__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structCouleur.html">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> couleur;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;} <a class="code" href="structCouleur.html">Couleur</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="TAD__Couleur_8h.html#ac10d2057a6a907aa0f619fbba8b8b084">TADCouleur_couleur</a>(<span class="keywordtype">bool</span> c);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="TAD__Couleur_8h.html#a9ce320db6799f2454c78fdcf040abc2b">TADCouleur_couleurOpposee</a>(<a class="code" href="structCouleur.html">Couleur</a> c);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="TAD__Couleur_8h.html#aa779c16797fa193eaa4da4db66ecf134">TADCouleur_couleursIdentiques</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur1,<a class="code" href="structCouleur.html">Couleur</a> couleur2);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="TAD__Couleur_8h.html#a18580afccad8855b8c51227ba03e0b2d">TADCouleur_afficherCouleur</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="ttc" id="aTAD__Couleur_8h_html_a18580afccad8855b8c51227ba03e0b2d"><div class="ttname"><a href="TAD__Couleur_8h.html#a18580afccad8855b8c51227ba03e0b2d">TADCouleur_afficherCouleur</a></div><div class="ttdeci">char * TADCouleur_afficherCouleur(Couleur couleur)</div><div class="ttdoc">Fonction qui affiche l'équivalent en couleur réelle du booléen contenu dans couleur....</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.c:29</div></div>
+<div class="ttc" id="aTAD__Couleur_8h_html_a9ce320db6799f2454c78fdcf040abc2b"><div class="ttname"><a href="TAD__Couleur_8h.html#a9ce320db6799f2454c78fdcf040abc2b">TADCouleur_couleurOpposee</a></div><div class="ttdeci">Couleur TADCouleur_couleurOpposee(Couleur c)</div><div class="ttdoc">Fonction de création de l'opposé de la couleur.</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.c:18</div></div>
+<div class="ttc" id="aTAD__Couleur_8h_html_aa779c16797fa193eaa4da4db66ecf134"><div class="ttname"><a href="TAD__Couleur_8h.html#aa779c16797fa193eaa4da4db66ecf134">TADCouleur_couleursIdentiques</a></div><div class="ttdeci">bool TADCouleur_couleursIdentiques(Couleur couleur1, Couleur couleur2)</div><div class="ttdoc">Fonction dqui verifie si deux couleurs sont identiques.</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.c:25</div></div>
+<div class="ttc" id="aTAD__Couleur_8h_html_ac10d2057a6a907aa0f619fbba8b8b084"><div class="ttname"><a href="TAD__Couleur_8h.html#ac10d2057a6a907aa0f619fbba8b8b084">TADCouleur_couleur</a></div><div class="ttdeci">Couleur TADCouleur_couleur(bool c)</div><div class="ttdoc">Fonction de création d'une couleur.</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.c:10</div></div>
+<div class="ttc" id="astructCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de représenter une couleur à partir de d'un booléen (1,0)</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

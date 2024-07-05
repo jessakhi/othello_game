@@ -1,0 +1,68 @@
+\hypertarget{JEU__Jouer_8h}{}\doxysection{Référence du fichier include/\+JEU\+\_\+\+Jouer.h}
+\label{JEU__Jouer_8h}\index{include/JEU\_Jouer.h@{include/JEU\_Jouer.h}}
+
+
+Implementation de la fonction jouer, qui permet d\textquotesingle{}effectuer toutes les étapes nécéssaires à un tour de jeu d\textquotesingle{}un joueur.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Couleur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Coup.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de JEU\+\_\+\+Jouer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{JEU__Jouer_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{JEU__Jouer_8h_ad247ca1e5b5e95875a517149763c2ec9}{JEU\+\_\+jouer}} (\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$p, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur\+\_\+courant, \mbox{\hyperlink{structCoup}{Coup}}($\ast$obtenir\+Coup)(\mbox{\hyperlink{structPlateau}{Plateau}}, \mbox{\hyperlink{structCouleur}{Couleur}}, int, char, unsigned int), int ligne, char colonne, unsigned int profondeur)
+\begin{DoxyCompactList}\small\item\em Procédure de jeu de coup sur le plateau p. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation de la fonction jouer, qui permet d\textquotesingle{}effectuer toutes les étapes nécéssaires à un tour de jeu d\textquotesingle{}un joueur. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{JEU__Jouer_8h_ad247ca1e5b5e95875a517149763c2ec9}\label{JEU__Jouer_8h_ad247ca1e5b5e95875a517149763c2ec9}} 
+\index{JEU\_Jouer.h@{JEU\_Jouer.h}!JEU\_jouer@{JEU\_jouer}}
+\index{JEU\_jouer@{JEU\_jouer}!JEU\_Jouer.h@{JEU\_Jouer.h}}
+\doxysubsubsection{\texorpdfstring{JEU\_jouer()}{JEU\_jouer()}}
+{\footnotesize\ttfamily void JEU\+\_\+jouer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur\+\_\+courant,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}($\ast$)(\mbox{\hyperlink{structPlateau}{Plateau}}, \mbox{\hyperlink{structCouleur}{Couleur}}, int, char, unsigned int)}]{obtenir\+Coup,  }\item[{int}]{ligne,  }\item[{char}]{colonne,  }\item[{unsigned int}]{profondeur }\end{DoxyParamCaption})}
+
+
+
+Procédure de jeu de coup sur le plateau p. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em couleur\+\_\+joueur\+\_\+courant} & \+: la couleur du joueur courant \\
+\hline
+{\em obtenir\+Coup} & \+: un pointeur de fonction sur la fonction à utiliser selon le joueur, un humain ou une IA \\
+\hline
+{\em ligne} & \\
+\hline
+{\em colonne} & \\
+\hline
+{\em profondeur} & \+: la profondeur à laquelle la recherche de coup devra se faire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}

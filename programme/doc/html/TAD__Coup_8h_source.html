@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de include/TAD_Coup.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TAD_Coup.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TAD__Coup_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __COUP__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __COUP__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Pion_8h.html">TAD_Pion.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Plateau_8h.html">TAD_Plateau.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structCoup.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="structPion.html">Pion</a> pion;  </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <a class="code" href="structCoup.html">Coup</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="structCoup.html">Coup</a> <a class="code" href="TAD__Coup_8h.html#a4fd2b462cfacbc388aac2aeaadc2fdc5">TADCoup_coup</a>(<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coup_8h.html#a45ee4a8b7f62ca4637c53306b2116911">TADCoup_jouerCoup</a>(<a class="code" href="structPlateau.html">Plateau</a> *p, <a class="code" href="structCoup.html">Coup</a> coup);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<a class="code" href="structPion.html">Pion</a> <a class="code" href="TAD__Coup_8h.html#a53600c2789e5df487e82746cdd5965f9">TADCoup_obtenirPion</a>(<a class="code" href="structCoup.html">Coup</a> coup);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aTAD__Coup_8h_html_a45ee4a8b7f62ca4637c53306b2116911"><div class="ttname"><a href="TAD__Coup_8h.html#a45ee4a8b7f62ca4637c53306b2116911">TADCoup_jouerCoup</a></div><div class="ttdeci">void TADCoup_jouerCoup(Plateau *p, Coup coup)</div><div class="ttdoc">Fonction qui place un pion sur le plateau.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.c:25</div></div>
+<div class="ttc" id="aTAD__Coup_8h_html_a4fd2b462cfacbc388aac2aeaadc2fdc5"><div class="ttname"><a href="TAD__Coup_8h.html#a4fd2b462cfacbc388aac2aeaadc2fdc5">TADCoup_coup</a></div><div class="ttdeci">Coup TADCoup_coup(Pion pion)</div><div class="ttdoc">Fonction qui creer un coup à partir d un pion.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.c:14</div></div>
+<div class="ttc" id="aTAD__Coup_8h_html_a53600c2789e5df487e82746cdd5965f9"><div class="ttname"><a href="TAD__Coup_8h.html#a53600c2789e5df487e82746cdd5965f9">TADCoup_obtenirPion</a></div><div class="ttdeci">Pion TADCoup_obtenirPion(Coup coup)</div><div class="ttdoc">Fonction qui obtient le pion associé au coup.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.c:20</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html"><div class="ttname"><a href="TAD__Pion_8h.html">TAD_Pion.h</a></div><div class="ttdoc">Implementation du TAD Pion pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Plateau_8h_html"><div class="ttname"><a href="TAD__Plateau_8h.html">TAD_Plateau.h</a></div><div class="ttdoc">Implementation du TAD Plateau pour le jeu d'Othello.</div></div>
+<div class="ttc" id="astructCoup_html"><div class="ttname"><a href="structCoup.html">Coup</a></div><div class="ttdoc">Le type Coup est un pion.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.h:20</div></div>
+<div class="ttc" id="astructPion_html"><div class="ttname"><a href="structPion.html">Pion</a></div><div class="ttdoc">Le type Pion permet de représenter un pion à partir de sa couleur et sa position.</div><div class="ttdef"><b>Definition:</b> TAD_Pion.h:20</div></div>
+<div class="ttc" id="astructPlateau_html"><div class="ttname"><a href="structPlateau.html">Plateau</a></div><div class="ttdoc">Le type Plateau permet de représenter un plateau de jeu.</div><div class="ttdef"><b>Definition:</b> TAD_Plateau.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

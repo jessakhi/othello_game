@@ -1,0 +1,10 @@
+\begin{algorithme}
+
+ \fonction{IA\_score}{p: Plateau , couleur\_joueur : Couleur}{\naturel}{ score, colonne , ligne : \naturel ,  pion : Pion  , couleur : Couleur , position : Position }{\affecter{score}{0}\pour{colonne}{1}{8}{}{\pour{ligne}{1}{8}{}{\affecter{position}{position(ligne,colonne)}
+     \affecter{pion}{obtenirPion(p,position)}
+     \affecter{couleur}{obtenirCouleur(pion)}
+     \sialors{couleursIdentiques(couleur,couleur\_joueur)}{\affecter{score}{score + 1}}
+     }
+     }
+     }
+    \end{algorithme}

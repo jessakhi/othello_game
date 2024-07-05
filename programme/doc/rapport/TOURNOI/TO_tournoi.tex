@@ -1,0 +1,33 @@
+\procedure{TO\_tournoi}{\paramEntree couleur\_choisie: Couleur , profondeur : \naturel}{p : Plateau , pos : Position , coup : Coup , coup\_possible , coup\_possible\_precedent , a\_nous\_de\_jouer , egalite : \booleen , vainqueur : Couleur , pion : Pion , saisie : Tableau [1..8] de caractère }{
+     \affecter{p}{ GP\_initialiserPlateau()}
+     \affecter{a\_nous\_de\_jouer}{non couleursIdentiques(Couleur\_couleur(1),couleur\_choisie)}
+     \affecter{coup\_possible}{Vrai}
+     \tantque{Vrai}{
+        \sialorssinon{ a\_nous\_de\_jouer}
+            {\affecter{coup\_possible\_precedent}{coup\_possible}
+            \affecter{coup\_possible}{GP\_tourJouable(p,couleur\_choisie)}
+            \sialorssinon{coup\_possible}{\affecter{coup} 
+               {\instruction{IA\_obtenirCoupIA(p,couleur\_choisie,0,0,profondeur)}}
+                \instruction{JEU\_jouer(p,couleur\_choisie,IA\_obtenirCoupIA,0,0,profondeur)}}
+            {
+               \sialorssinon{coup\_possible\_precedent}{\ecrire{"passe"}} 
+                   {\affecter{egalite} {JEU\_trouverEgalite(p)}
+                   \affecter{vainqueur}{JEU\_trouverVainqueur(p)} 
+                        \sialorssinon{egalite}{\ecrire{"nulle"}}{\ecrire{couleursIdentiques(vainqueur,Couleur\_couleur(1)))  "blanc" : "noir"}}
+                   }
+             }
+           }
+        {\lire{saisie}
+        \sialors{sontEgalesIC(saisie , "passe")}{
+         \affecter{pos}{GP\_convertirCoordonneeEnPosition(saisie)}
+        \affecter{pion}{ pion(TADCouleur\_couleurOpposee(couleur\_choisie), pos)}
+        \affecter{coup}{coup(pion)}
+         \instruction{jouerCoup(p,coup)}
+        \instruction{GP\_miseAJourPlateau(p, coup)}
+     
+     }
+     }
+     {\affecter{a\_nous\_de\_jouer}{non a\_nous\_de\_jouer}}
+     }
+     }
+   

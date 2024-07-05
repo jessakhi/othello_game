@@ -1,0 +1,131 @@
+\hypertarget{TAD__Couleur_8h}{}\doxysection{Référence du fichier include/\+TAD\+\_\+\+Couleur.h}
+\label{TAD__Couleur_8h}\index{include/TAD\_Couleur.h@{include/TAD\_Couleur.h}}
+
+
+Implementation du TAD \mbox{\hyperlink{structCouleur}{Couleur}} pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de TAD\+\_\+\+Couleur.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{TAD__Couleur_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TAD__Couleur_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCouleur}{Couleur}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structCouleur}{Couleur}} permet de représenter une couleur à partir de d\textquotesingle{}un booléen (1,0) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCouleur}{Couleur}} \mbox{\hyperlink{TAD__Couleur_8h_ac10d2057a6a907aa0f619fbba8b8b084}{TADCouleur\+\_\+couleur}} (bool c)
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}une couleur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCouleur}{Couleur}} \mbox{\hyperlink{TAD__Couleur_8h_a9ce320db6799f2454c78fdcf040abc2b}{TADCouleur\+\_\+couleur\+Opposee}} (\mbox{\hyperlink{structCouleur}{Couleur}} c)
+\begin{DoxyCompactList}\small\item\em Fonction de création de l\textquotesingle{}opposé de la couleur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{TAD__Couleur_8h_aa779c16797fa193eaa4da4db66ecf134}{TADCouleur\+\_\+couleurs\+Identiques}} (\mbox{\hyperlink{structCouleur}{Couleur}} couleur1, \mbox{\hyperlink{structCouleur}{Couleur}} couleur2)
+\begin{DoxyCompactList}\small\item\em Fonction dqui verifie si deux couleurs sont identiques. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{TAD__Couleur_8h_a18580afccad8855b8c51227ba03e0b2d}{TADCouleur\+\_\+afficher\+Couleur}} (\mbox{\hyperlink{structCouleur}{Couleur}} couleur)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche l\textquotesingle{}équivalent en couleur réelle du booléen contenu dans couleur.\+couleur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du TAD \mbox{\hyperlink{structCouleur}{Couleur}} pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{TAD__Couleur_8h_a18580afccad8855b8c51227ba03e0b2d}\label{TAD__Couleur_8h_a18580afccad8855b8c51227ba03e0b2d}} 
+\index{TAD\_Couleur.h@{TAD\_Couleur.h}!TADCouleur\_afficherCouleur@{TADCouleur\_afficherCouleur}}
+\index{TADCouleur\_afficherCouleur@{TADCouleur\_afficherCouleur}!TAD\_Couleur.h@{TAD\_Couleur.h}}
+\doxysubsubsection{\texorpdfstring{TADCouleur\_afficherCouleur()}{TADCouleur\_afficherCouleur()}}
+{\footnotesize\ttfamily char$\ast$ TADCouleur\+\_\+afficher\+Couleur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche l\textquotesingle{}équivalent en couleur réelle du booléen contenu dans couleur.\+couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur1} & la couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+const char$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Couleur_8h_ac10d2057a6a907aa0f619fbba8b8b084}\label{TAD__Couleur_8h_ac10d2057a6a907aa0f619fbba8b8b084}} 
+\index{TAD\_Couleur.h@{TAD\_Couleur.h}!TADCouleur\_couleur@{TADCouleur\_couleur}}
+\index{TADCouleur\_couleur@{TADCouleur\_couleur}!TAD\_Couleur.h@{TAD\_Couleur.h}}
+\doxysubsubsection{\texorpdfstring{TADCouleur\_couleur()}{TADCouleur\_couleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCouleur}{Couleur}} TADCouleur\+\_\+couleur (\begin{DoxyParamCaption}\item[{bool}]{param }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}une couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & le booléen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCouleur}{Couleur}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Couleur_8h_a9ce320db6799f2454c78fdcf040abc2b}\label{TAD__Couleur_8h_a9ce320db6799f2454c78fdcf040abc2b}} 
+\index{TAD\_Couleur.h@{TAD\_Couleur.h}!TADCouleur\_couleurOpposee@{TADCouleur\_couleurOpposee}}
+\index{TADCouleur\_couleurOpposee@{TADCouleur\_couleurOpposee}!TAD\_Couleur.h@{TAD\_Couleur.h}}
+\doxysubsubsection{\texorpdfstring{TADCouleur\_couleurOpposee()}{TADCouleur\_couleurOpposee()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCouleur}{Couleur}} TADCouleur\+\_\+couleur\+Opposee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Fonction de création de l\textquotesingle{}opposé de la couleur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & la couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCouleur}{Couleur}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Couleur_8h_aa779c16797fa193eaa4da4db66ecf134}\label{TAD__Couleur_8h_aa779c16797fa193eaa4da4db66ecf134}} 
+\index{TAD\_Couleur.h@{TAD\_Couleur.h}!TADCouleur\_couleursIdentiques@{TADCouleur\_couleursIdentiques}}
+\index{TADCouleur\_couleursIdentiques@{TADCouleur\_couleursIdentiques}!TAD\_Couleur.h@{TAD\_Couleur.h}}
+\doxysubsubsection{\texorpdfstring{TADCouleur\_couleursIdentiques()}{TADCouleur\_couleursIdentiques()}}
+{\footnotesize\ttfamily bool TADCouleur\+\_\+couleurs\+Identiques (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur1,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur2 }\end{DoxyParamCaption})}
+
+
+
+Fonction dqui verifie si deux couleurs sont identiques. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur1} & la couleur \\
+\hline
+{\em couleur2} & \+: la deuxième couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}

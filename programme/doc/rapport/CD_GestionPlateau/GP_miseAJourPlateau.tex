@@ -1,0 +1,50 @@
+\begin{algorithme}
+    
+
+\procedure{GP\_miseAJourPlateau}{\paramEntreeSortie{p : Plateau}, \paramEntree{coup : coup}}
+{
+    pos : Position \\
+    dir : \naturel \\
+    pion : Pion
+}
+{
+    \pour{dir}{0}{8}{}{
+        \affecter{pos}{TADPion\_obtenirPosition(TADCoup\_obtenirPion(coup))}
+        \affecter{directionValide}{GP\_testerDirection(p, pos, dir)}
+        \instruction{TADPion\_obtenirCouleur(TADCoup\_obtenirPion(coup))}
+        \sialors{directionValide}{
+            \affecter{pos}{JEU\_seDeplacerDansLaDirection(pos, dir)}
+            \tantque{sequenceDePions(p, pos, couleur\_joueur)}{
+                \affecter{pion}{TADPlateau\_obtenirPion(p,pos)}
+                \instruction{TADPion\_changerCouleur(pion)}
+                \instruction{TADPlateau\_placerPion(p, pion)}
+                \affecter{pos}{JEU\_seDeplacerDansLaDirection(pos, dir)}
+            }
+        }
+    }
+}
+\end{algorithme}
+
+
+
+\begin{comment}
+procédure GP_miseAJourPlateau(E/S p: Plateau, E coup: Coup)
+déclaration: pos: Position, dir: Naturel, pion: Pion
+
+début
+    pour dir allant de 0 à 8 faire:
+		pos <- TADPion_obtenirPosition(TADCoup_obtenirPion(coup))
+		directionValide <- GP_testerDirection(p, pos, dir, TADPion_obtenirCouleur(TADCoup_obtenirPion(coup)))
+        
+        si directionValide alors:
+            pos = JEU_seDeplacerDansLaDirection(pos, dir)
+            tant que non TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)),TADPion_obtenirCouleur(coup.pion)) ET TADPlateau_obtenirPion(p, pos).estPlace faire:
+                pion <- TADPlateau_obtenirPion(p,pos)
+				TADPion_changerCouleur(pion)
+				TADPlateau_placerPion(p, pion)
+                pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+            fin tant que
+        fin si
+    fin pour
+fin
+\end{comment}

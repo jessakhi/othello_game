@@ -1,0 +1,184 @@
+\hypertarget{TAD__Plateau_8h}{}\doxysection{Référence du fichier include/\+TAD\+\_\+\+Plateau.h}
+\label{TAD__Plateau_8h}\index{include/TAD\_Plateau.h@{include/TAD\_Plateau.h}}
+
+
+Implementation du TAD \mbox{\hyperlink{structPlateau}{Plateau}} pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Pion.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de TAD\+\_\+\+Plateau.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{TAD__Plateau_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TAD__Plateau_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPlateau}{Plateau}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structPlateau}{Plateau}} permet de représenter un plateau de jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPlateau}{Plateau}} \mbox{\hyperlink{TAD__Plateau_8h_ad537bfcea13055070e66fae322cab450}{TADPlateau\+\_\+plateau}} ()
+\begin{DoxyCompactList}\small\item\em Fonction de création d\textquotesingle{}un plateau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_a5b863c7d8d13884a535bc65225c12627}\label{TAD__Plateau_8h_a5b863c7d8d13884a535bc65225c12627}} 
+bool {\bfseries TADPlateau\+\_\+tester\+Fin} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur)
+\item 
+unsigned int \mbox{\hyperlink{TAD__Plateau_8h_ab76593ebfe8503aa766f15cbeff59883}{TADPlateau\+\_\+nb\+Pions\+DUne\+Couleur}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCouleur}{Couleur}} c)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir le nombre de pion de couleur c placés sur le plateau. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{TAD__Plateau_8h_a4eec31267f2595ce2391b428b1c74728}{TADPlateau\+\_\+obtenir\+Hauteur}} (\mbox{\hyperlink{structPlateau}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la hauteur du plateau (encapsulation) \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{TAD__Plateau_8h_ab00cb4ca49443e029113e50510a1bc02}{TADPlateau\+\_\+obtenir\+Largeur}} (\mbox{\hyperlink{structPlateau}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la largeur du plateau (encapsulation) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPlateau}{Plateau}} \mbox{\hyperlink{TAD__Plateau_8h_a11e4ae649e010aedaa3d37b059c53c68}{TADPlateau\+\_\+mettre\+AJour\+Plateau}} (\mbox{\hyperlink{structPlateau}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Procedure qui permet de mettre à jours le tableau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_aef9b1c24e77a7e138f030eec98904e90}\label{TAD__Plateau_8h_aef9b1c24e77a7e138f030eec98904e90}} 
+\mbox{\hyperlink{structPion}{Pion}} {\bfseries TADPlateau\+\_\+obtenir\+Pion} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structPosition}{Position}} pos)
+\item 
+bool \mbox{\hyperlink{TAD__Plateau_8h_a4d3c92c4ceafea8dc8a0ad0ef103ec1b}{TADPlateau\+\_\+est\+Plein}} (\mbox{\hyperlink{structPlateau}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de savoir si le plateau p est plein (tous les pions placés) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_adb54d11bb54e9e5295a0b0836e48cf30}\label{TAD__Plateau_8h_adb54d11bb54e9e5295a0b0836e48cf30}} 
+void {\bfseries TADPlateau\+\_\+placer\+Pion} (\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$p, \mbox{\hyperlink{structPion}{Pion}} pion)
+\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_a1a9b62f1127f6eb08c4de877b387a242}\label{TAD__Plateau_8h_a1a9b62f1127f6eb08c4de877b387a242}} 
+void {\bfseries TADPlateau\+\_\+copier} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structPlateau}{Plateau}} $\ast$copie)
+\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_a53c9246afef7a6381a3c021c88f57d0b}\label{TAD__Plateau_8h_a53c9246afef7a6381a3c021c88f57d0b}} 
+bool {\bfseries TADPlateau\+\_\+meme\+Plateau} (\mbox{\hyperlink{structPlateau}{Plateau}} p1, \mbox{\hyperlink{structPlateau}{Plateau}} p2)
+\item 
+\mbox{\Hypertarget{TAD__Plateau_8h_a99f4f15c1f3d56adbf680a58afb04ed1}\label{TAD__Plateau_8h_a99f4f15c1f3d56adbf680a58afb04ed1}} 
+void {\bfseries TADPlateau\+\_\+effacer} (\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du TAD \mbox{\hyperlink{structPlateau}{Plateau}} pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{TAD__Plateau_8h_a4d3c92c4ceafea8dc8a0ad0ef103ec1b}\label{TAD__Plateau_8h_a4d3c92c4ceafea8dc8a0ad0ef103ec1b}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_estPlein@{TADPlateau\_estPlein}}
+\index{TADPlateau\_estPlein@{TADPlateau\_estPlein}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_estPlein()}{TADPlateau\_estPlein()}}
+{\footnotesize\ttfamily bool TADPlateau\+\_\+est\+Plein (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de savoir si le plateau p est plein (tous les pions placés) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Plateau_8h_a11e4ae649e010aedaa3d37b059c53c68}\label{TAD__Plateau_8h_a11e4ae649e010aedaa3d37b059c53c68}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_mettreAJourPlateau@{TADPlateau\_mettreAJourPlateau}}
+\index{TADPlateau\_mettreAJourPlateau@{TADPlateau\_mettreAJourPlateau}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_mettreAJourPlateau()}{TADPlateau\_mettreAJourPlateau()}}
+{\footnotesize\ttfamily TADPlateau\+\_\+mettre\+AJour\+Plateau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Procedure qui permet de mettre à jours le tableau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPlateau}{Plateau}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Plateau_8h_ab76593ebfe8503aa766f15cbeff59883}\label{TAD__Plateau_8h_ab76593ebfe8503aa766f15cbeff59883}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_nbPionsDUneCouleur@{TADPlateau\_nbPionsDUneCouleur}}
+\index{TADPlateau\_nbPionsDUneCouleur@{TADPlateau\_nbPionsDUneCouleur}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_nbPionsDUneCouleur()}{TADPlateau\_nbPionsDUneCouleur()}}
+{\footnotesize\ttfamily TADPlateau\+\_\+nb\+Pions\+DUne\+Couleur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir le nombre de pion de couleur c placés sur le plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em c} & \+: la couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Plateau_8h_a4eec31267f2595ce2391b428b1c74728}\label{TAD__Plateau_8h_a4eec31267f2595ce2391b428b1c74728}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_obtenirHauteur@{TADPlateau\_obtenirHauteur}}
+\index{TADPlateau\_obtenirHauteur@{TADPlateau\_obtenirHauteur}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_obtenirHauteur()}{TADPlateau\_obtenirHauteur()}}
+{\footnotesize\ttfamily TADPlateau\+\_\+obtenir\+Hauteur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la hauteur du plateau (encapsulation) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Plateau_8h_ab00cb4ca49443e029113e50510a1bc02}\label{TAD__Plateau_8h_ab00cb4ca49443e029113e50510a1bc02}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_obtenirLargeur@{TADPlateau\_obtenirLargeur}}
+\index{TADPlateau\_obtenirLargeur@{TADPlateau\_obtenirLargeur}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_obtenirLargeur()}{TADPlateau\_obtenirLargeur()}}
+{\footnotesize\ttfamily TADPlateau\+\_\+obtenir\+Largeur (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la largeur du plateau (encapsulation) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Plateau_8h_ad537bfcea13055070e66fae322cab450}\label{TAD__Plateau_8h_ad537bfcea13055070e66fae322cab450}} 
+\index{TAD\_Plateau.h@{TAD\_Plateau.h}!TADPlateau\_plateau@{TADPlateau\_plateau}}
+\index{TADPlateau\_plateau@{TADPlateau\_plateau}!TAD\_Plateau.h@{TAD\_Plateau.h}}
+\doxysubsubsection{\texorpdfstring{TADPlateau\_plateau()}{TADPlateau\_plateau()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPlateau}{Plateau}} TADPlateau\+\_\+plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction de création d\textquotesingle{}un plateau. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPlateau}{Plateau}} 
+\end{DoxyReturn}

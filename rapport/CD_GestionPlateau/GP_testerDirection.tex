@@ -1,0 +1,80 @@
+\begin{algorithme}
+
+\fonction{GP\_testerDirection}{p : Plateau, pos : Position, dir : \naturel, couleur\_joueur : Couleur}{\booleen}
+{
+    directionValide : \booleen
+}
+{
+    \affecter{directionValide}{FAUX}
+
+    \repeter{
+        \affecter{pos}{JEU\_seDeplacerDansLaDirection(pos, dir)}
+        \sialorssinon{GP\_positionInvalide(pos)}{
+            \retourner{FAUX}
+        }
+        {
+            \sialorssinon{sequenceDePions(p, pos, couleur\_joueur)}
+            {
+                \retourner{FAUX}
+            }
+            {
+                \sialors{NON sequenceDePions(p, pos, couleur\_joueur)}{
+                    \tantque{TADPlateau\_obtenirPion(p, pos).estPlace ET NON directionValide ET NON GP\_positionInvalide(pos)}{
+                        \affecter{pos}{JEU\_seDeplacerDansLaDirection(pos, dir)}
+                        \sialors{GP\_positionInvalide(pos)}{
+                            \retourner{FAUX}
+                        }
+                        \sialors{NON sequenceDePions(p, pos, couleur\_joueur)}{
+                            \retourner{VRAI}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    {
+        TADPlateau\_obtenirPion(p, pos).estPlace ET NON directionValide
+    }
+    \retourner{directionValide}}
+
+\begin{comment}
+fonction GP_testerDirection(p: Plateau, pos: Position, dir: Naturel, couleur_joueur: Couleur): Booléen
+déclaration: directionValide: Booléen
+
+début
+    directionValide <- FAUX
+
+    faire
+        pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+        si GP_positionInvalide(pos) alors:
+            retourner FAUX
+        sinon:
+            si TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) ET TADPlateau_obtenirPion(p, pos).estPlace
+                retourner FAUX
+            sinon:
+                si NON TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) && TADPlateau_obtenirPion(p, pos).estPlace
+                    tant que TADPlateau_obtenirPion(p, pos).estPlace && !directionValide && !GP_positionInvalide(pos) faire:
+                        pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+                        si(GP_positionInvalide(pos)) alors:
+                            retourner FAUX
+                        fin si
+                        si TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) && TADPlateau_obtenirPion(p, pos).estPlace
+                            directionValide <- VRAI
+                        fin si
+                    fin tant que
+                fin si
+            fin si
+        fin si
+    tant que TADPlateau_obtenirPion(p, pos).estPlace ET NON directionValide
+
+    retourner directionValide
+fin
+
+
+fonction sequenceDePions(p, pos, couleur_joueur): Booleen
+début
+    retourner !TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) ET TADPlateau_obtenirPion(p, pos).estPlace
+fin
+
+
+\end{comment}

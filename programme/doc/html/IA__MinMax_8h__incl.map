@@ -1,0 +1,8 @@
+<map id="include/IA_MinMax.h" name="include/IA_MinMax.h">
+<area shape="rect" id="node1" title="Implementation de l&#39;algorithme du MinMax qui maximise le score de l&#39;IA et minimise celui de l&#39;adversa..." alt="" coords="80,5,224,32"/>
+<area shape="rect" id="node2" href="$TAD__Plateau_8h.html" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="50,80,161,107"/>
+<area shape="rect" id="node6" href="$TAD__Couleur_8h.html" title="Implementation du TAD Couleur pour le jeu d&#39;Othello." alt="" coords="159,229,270,256"/>
+<area shape="rect" id="node3" href="$TAD__Pion_8h.html" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="38,155,130,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="61,304,136,331"/>
+<area shape="rect" id="node5" href="$TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="22,229,135,256"/>
+</map>

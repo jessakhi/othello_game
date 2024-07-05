@@ -1,0 +1,18 @@
+\begin{algorithme}
+\procedure{JEU\_calculerScore}{\paramEntree{p1 : Plateau} \paramEntreeSortie{score\_blanc : \naturel , score\_noir : \naturel }}{ TAILLE : \naturel , blanc , noir : Couleur , position : Position , pion : Pion}{\affecter{TAILLE}{8}
+             \affecter{blanc}{couleur(Vrai)}
+             \affecter{noir}{couleur(Faux)}
+             \affecter{score\_blanc}{0}
+             \affecter{score\_noir}{0}
+             \pour{i}{1}{TAILLE}{}{
+             \pour{j}{1}{TAILLE}{}{
+             \affecter{position}{position(i,j)}
+             \affecter{pion}{obtenirPion(pl, position)}
+             \sialors{estPlace(pion)}{
+             \sialors{couleursIdentiques(obtenirCouleur(pion),blanc)}{\affecter{score\_blanc}{score\_blanc + 1}}
+              \sialors{couleursIdentiques(obtenirCouleur(pion),noir)}{\affecter{score\_noir}{score\_noir + 1}} 
+             }
+             }
+             }
+             }
+\end{algorithme}

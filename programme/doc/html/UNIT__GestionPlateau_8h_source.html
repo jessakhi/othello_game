@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de include/UNIT_GestionPlateau.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">UNIT_GestionPlateau.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="UNIT__GestionPlateau_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef __GESTION_PLATEAU__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define __GESTION_PLATEAU__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Plateau_8h.html">TAD_Plateau.h</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Couleur_8h.html">TAD_Couleur.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Position_8h.html">TAD_Position.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Pion_8h.html">TAD_Pion.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Coup_8h.html">TAD_Coup.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="structPosition.html">Position</a> <a class="code" href="UNIT__GestionPlateau_8h.html#a6a92518525aa92fbe632ab25e0338309">GP_convertirCoordonneeEnPosition</a>(<span class="keywordtype">char</span> str[]);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="structPlateau.html">Plateau</a> <a class="code" href="UNIT__GestionPlateau_8h.html#a9d707053a3732766cabc3f6b5ac4d3f4">GP_initialiserPlateau</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">bool</span> GP_positionInvalide(<a class="code" href="structPosition.html">Position</a> pos);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="UNIT__GestionPlateau_8h.html#a1e6466b46b35e2147c96fcf684fd54e6">GP_tourJouable</a>(<a class="code" href="structPlateau.html">Plateau</a> p, <a class="code" href="structCouleur.html">Couleur</a> couleur_joueur);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="UNIT__GestionPlateau_8h.html#a44457d8dc20d0d478f5c1bec1a79d4fe">GP_testerDirection</a>(<a class="code" href="structPlateau.html">Plateau</a> p, <a class="code" href="structPosition.html">Position</a> pos, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dir, <a class="code" href="structCouleur.html">Couleur</a> c);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="UNIT__GestionPlateau_8h.html#af903aa29cca6cf41489c0480e914ba1d">GP_miseAJourPlateau</a>(<a class="code" href="structPlateau.html">Plateau</a> *p, <a class="code" href="structCoup.html">Coup</a> coup);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> GP_nbPionsContigus(<a class="code" href="structPlateau.html">Plateau</a> p,<a class="code" href="structPion.html">Pion</a> pion);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">int</span> <a class="code" href="UNIT__GestionPlateau_8h.html#a8025ffe0743552c9eda6933818ffec28">GP_max</a>(<span class="keywordtype">int</span> nb1, <span class="keywordtype">int</span> nb2);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">int</span> <a class="code" href="UNIT__GestionPlateau_8h.html#ad025ae9be3cb0f626eaa8899b8e43539">GP_min</a>(<span class="keywordtype">int</span> nb1, <span class="keywordtype">int</span> nb2);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="UNIT__GestionPlateau_8h.html#a2c4fd0929a6989911b3c8c6792968bba">GP_afficherPlateau</a>(<a class="code" href="structPlateau.html">Plateau</a> p);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aTAD__Couleur_8h_html"><div class="ttname"><a href="TAD__Couleur_8h.html">TAD_Couleur.h</a></div><div class="ttdoc">Implementation du TAD Couleur pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Coup_8h_html"><div class="ttname"><a href="TAD__Coup_8h.html">TAD_Coup.h</a></div><div class="ttdoc">Implementation du TAD Coup pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Pion_8h_html"><div class="ttname"><a href="TAD__Pion_8h.html">TAD_Pion.h</a></div><div class="ttdoc">Implementation du TAD Pion pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Plateau_8h_html"><div class="ttname"><a href="TAD__Plateau_8h.html">TAD_Plateau.h</a></div><div class="ttdoc">Implementation du TAD Plateau pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Position_8h_html"><div class="ttname"><a href="TAD__Position_8h.html">TAD_Position.h</a></div><div class="ttdoc">Implementation du TAD Position pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a1e6466b46b35e2147c96fcf684fd54e6"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a1e6466b46b35e2147c96fcf684fd54e6">GP_tourJouable</a></div><div class="ttdeci">bool GP_tourJouable(Plateau p, Couleur couleur_joueur)</div><div class="ttdoc">permet d'indiquer si un joueur peu placer un pion ou non lorsqu'il est censé jouer</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:64</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a2c4fd0929a6989911b3c8c6792968bba"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a2c4fd0929a6989911b3c8c6792968bba">GP_afficherPlateau</a></div><div class="ttdeci">void GP_afficherPlateau(Plateau p)</div><div class="ttdoc">Procédure qui affiche le plateau.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:26</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a44457d8dc20d0d478f5c1bec1a79d4fe"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a44457d8dc20d0d478f5c1bec1a79d4fe">GP_testerDirection</a></div><div class="ttdeci">bool GP_testerDirection(Plateau p, Position pos, unsigned int dir, Couleur c)</div><div class="ttdoc">qui permet de tester si la direction est valide</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:79</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a6a92518525aa92fbe632ab25e0338309"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a6a92518525aa92fbe632ab25e0338309">GP_convertirCoordonneeEnPosition</a></div><div class="ttdeci">Position GP_convertirCoordonneeEnPosition(char str[])</div><div class="ttdoc">Fonction qui converti les coordonnées entrées en Position.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:14</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a8025ffe0743552c9eda6933818ffec28"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a8025ffe0743552c9eda6933818ffec28">GP_max</a></div><div class="ttdeci">int GP_max(int nb1, int nb2)</div><div class="ttdoc">Fonction qui retourne le maximum de deux entiers.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:139</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_a9d707053a3732766cabc3f6b5ac4d3f4"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#a9d707053a3732766cabc3f6b5ac4d3f4">GP_initialiserPlateau</a></div><div class="ttdeci">Plateau GP_initialiserPlateau()</div><div class="ttdoc">Fonction d'initialisation du plateau.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:43</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_ad025ae9be3cb0f626eaa8899b8e43539"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#ad025ae9be3cb0f626eaa8899b8e43539">GP_min</a></div><div class="ttdeci">int GP_min(int nb1, int nb2)</div><div class="ttdoc">Fonction qui retourne le minimum de deux entiers.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:146</div></div>
+<div class="ttc" id="aUNIT__GestionPlateau_8h_html_af903aa29cca6cf41489c0480e914ba1d"><div class="ttname"><a href="UNIT__GestionPlateau_8h.html#af903aa29cca6cf41489c0480e914ba1d">GP_miseAJourPlateau</a></div><div class="ttdeci">void GP_miseAJourPlateau(Plateau *p, Coup coup)</div><div class="ttdoc">Procédure de mise à jour du plateau.</div><div class="ttdef"><b>Definition:</b> UNIT_GestionPlateau.c:116</div></div>
+<div class="ttc" id="astructCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de représenter une couleur à partir de d'un booléen (1,0)</div><div class="ttdef"><b>Definition:</b> TAD_Couleur.h:17</div></div>
+<div class="ttc" id="astructCoup_html"><div class="ttname"><a href="structCoup.html">Coup</a></div><div class="ttdoc">Le type Coup est un pion.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.h:20</div></div>
+<div class="ttc" id="astructPion_html"><div class="ttname"><a href="structPion.html">Pion</a></div><div class="ttdoc">Le type Pion permet de représenter un pion à partir de sa couleur et sa position.</div><div class="ttdef"><b>Definition:</b> TAD_Pion.h:20</div></div>
+<div class="ttc" id="astructPlateau_html"><div class="ttname"><a href="structPlateau.html">Plateau</a></div><div class="ttdoc">Le type Plateau permet de représenter un plateau de jeu.</div><div class="ttdef"><b>Definition:</b> TAD_Plateau.h:20</div></div>
+<div class="ttc" id="astructPosition_html"><div class="ttname"><a href="structPosition.html">Position</a></div><div class="ttdoc">Le type Position permet de représenter une position.</div><div class="ttdef"><b>Definition:</b> TAD_Position.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

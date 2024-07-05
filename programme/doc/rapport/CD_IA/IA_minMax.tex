@@ -1,0 +1,18 @@
+\begin{algorithme}
+    
+
+\fonction{IA\_minMax}{p : Plateau , couleur\_joueur\_courant : Couleur , couleur\_joueur\_referent : Couleur , profondeur : \naturel}{\naturel}{resultat : \naturel , coups\_possibles : Coups , score,nb\_coups\_possibles : \naturel , i : \naturel }{
+               \affecter{coups\_possibles}{IA\_obtenirCoupsPossibles(p,couleur\_joueur\_courant)}
+               \affecter{nb\_coups\_possibles}{Coups\_obtenirNbCoups(coups\_possibles)}
+               \sialorssinon{
+               nb\_coups\_possibles = 0}
+               {\retourner{0}}{
+               \affecter{resultat}{IA\_scoreDUnCoup(p,Coups\_obtenirIEmeCoup(coups\_possibles,0),couleur\_joueur\_courant,profondeur)}
+               \pour{i}{2}{nb\_coups\_possibles}{}{
+               \affecter{score}{IA\_scoreDUnCoup(p,obtenirIEmeCoup(coups\_possibles,i),couleur\_joueur\_courant,profondeur)}
+               \sialorssinon{Couleur\_couleursIdentiques(couleur\_joueur\_courant,couleur\_joueur\_referent)}{
+               \affecter{resultat}{GP\_max(resultat,score)}
+               }{\affecter{resultat}{GP\_min(resultat,score)}}
+               }
+               \retourner{resultat} }}
+            \end{algorithme}

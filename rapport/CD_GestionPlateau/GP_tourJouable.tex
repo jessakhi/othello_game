@@ -1,0 +1,40 @@
+\begin{algorithme}
+    \begin{fonction}{GP\_tourJouable}{p : Plateau, couleur\_joueur : Couleur}{\booleen}
+{
+    i, j, dir : \naturel
+}
+{
+    \pour{i}{0}{8}{}{
+        \pour{j}{0}{8}{}{
+            \sialors{NON TADPlateau\_obtenirPion(p, TADPosition\_position(i, j)).estPlace}{
+                \pour{dir}{0}{8}{}{
+                    \sialors{GP\_testerDirection(p, TADPosition\_position(i, j), dir, couleur\_joueur)}{
+                        \retourner{VRAI}
+                    }
+                }
+            }
+                
+        }    
+    }
+    \retourner{FAUX}
+}
+\begin{comment}
+fonction GP_tourJouable(p: Plateau, couleur_joueur: Couleur): Booléen
+déclaration: i, j, dir: Naturel
+
+début
+    pour i allant de 0 à 8 faire:
+        pour j allant de 0 à 8 faire:
+            si NON TADPlateau_obtenirPion(p, TADPosition_position(i, j)).estPlace alors:
+                pour dir allant de 0 à 8:
+                    si GP_testerDirection(p, TADPosition_position(i, j), dir, couleur_joueur):
+                        retourner VRAI
+                    fin si
+                fin pour
+            fin si
+        fin pour
+    fin pour
+    retourner FAUX
+fin
+\end{comment}
+

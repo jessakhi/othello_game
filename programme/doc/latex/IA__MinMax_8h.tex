@@ -1,0 +1,63 @@
+\hypertarget{IA__MinMax_8h}{}\doxysection{Référence du fichier include/\+IA\+\_\+\+Min\+Max.h}
+\label{IA__MinMax_8h}\index{include/IA\_MinMax.h@{include/IA\_MinMax.h}}
+
+
+Implementation de l\textquotesingle{}algorithme du Min\+Max qui maximise le score de l\textquotesingle{}IA et minimise celui de l\textquotesingle{}adversaire.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Couleur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de IA\+\_\+\+Min\+Max.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{IA__MinMax_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{IA__MinMax_8h_a7d9ea790ce5417928a26ab5fff444412}{IA\+\_\+min\+Max}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur\+\_\+referent, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur\+\_\+courant, unsigned int profondeur)
+\begin{DoxyCompactList}\small\item\em Fonction qui maximise le score du joueur (IA) et minimise celui de son adversaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation de l\textquotesingle{}algorithme du Min\+Max qui maximise le score de l\textquotesingle{}IA et minimise celui de l\textquotesingle{}adversaire. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+22/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{IA__MinMax_8h_a7d9ea790ce5417928a26ab5fff444412}\label{IA__MinMax_8h_a7d9ea790ce5417928a26ab5fff444412}} 
+\index{IA\_MinMax.h@{IA\_MinMax.h}!IA\_minMax@{IA\_minMax}}
+\index{IA\_minMax@{IA\_minMax}!IA\_MinMax.h@{IA\_MinMax.h}}
+\doxysubsubsection{\texorpdfstring{IA\_minMax()}{IA\_minMax()}}
+{\footnotesize\ttfamily int IA\+\_\+min\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur\+\_\+referent,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur\+\_\+courant,  }\item[{unsigned int}]{profondeur }\end{DoxyParamCaption})}
+
+
+
+Fonction qui maximise le score du joueur (IA) et minimise celui de son adversaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em couleur\+\_\+joueur\+\_\+courant} & \+: la couleur du joueur courant, on minimisera si c\textquotesingle{}est l\textquotesingle{}adversaire, maximisera si elle coincide avec la couleur\+\_\+joueur\+\_\+referent \\
+\hline
+{\em couleur\+\_\+joueur\+\_\+referent} & \+: la couleur du joueur de référence, l\textquotesingle{}IA \\
+\hline
+{\em profondeur} & \+: la profondeur à laquelle l\textquotesingle{}ia travaille \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int \+: le résultat de l\textquotesingle{}algorithme Min\+Max 
+\end{DoxyReturn}

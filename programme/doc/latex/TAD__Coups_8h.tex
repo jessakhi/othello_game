@@ -1,0 +1,321 @@
+\hypertarget{TAD__Coups_8h}{}\doxysection{Référence du fichier include/\+TAD\+\_\+\+Coups.h}
+\label{TAD__Coups_8h}\index{include/TAD\_Coups.h@{include/TAD\_Coups.h}}
+
+
+Implementation du TAD \mbox{\hyperlink{structCoups}{Coups}} pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Coup.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de TAD\+\_\+\+Coups.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{TAD__Coups_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Structures de données}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNcoups}{Ncoups}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structNcoups}{Ncoups}} est un noeud de coups qui sera utilisé pour representer le type Liste\+Coups. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structCoups}{Coups}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structCoups}{Coups}} est une Liste de coups ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}\label{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}} 
+typedef struct \mbox{\hyperlink{structNcoups}{Ncoups}} $\ast$ \mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}
+\begin{DoxyCompactList}\small\item\em Le type Listes\+Coups est un pointeur sur des noeud de coups. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Coups_8h_abf515da1408ccf5dc816ff816df2536f}\label{TAD__Coups_8h_abf515da1408ccf5dc816ff816df2536f}} 
+typedef struct \mbox{\hyperlink{structNcoups}{Ncoups}} \mbox{\hyperlink{TAD__Coups_8h_abf515da1408ccf5dc816ff816df2536f}{Ncoups}}
+\begin{DoxyCompactList}\small\item\em Le type \mbox{\hyperlink{structNcoups}{Ncoups}} est un noeud de coups qui sera utilisé pour representer le type Liste\+Coups. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{TAD__Coups_8h_aa2452a62031d3c5d9a00645c83edfe9e}{Liste\+Coups\+\_\+ajouter\+Coup}} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$liste\+\_\+coups, \mbox{\hyperlink{structCoup}{Coup}} c)
+\begin{DoxyCompactList}\small\item\em Procedure d\textquotesingle{}ajout d\textquotesingle{}un coup à une liste de coups. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coups_8h_ad6b48bd4f4143134628692eb4e9d0f64}{Liste\+Coups\+\_\+supprimer\+Coup}} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$liste\+\_\+coups)
+\begin{DoxyCompactList}\small\item\em Procedure de suppression de coups. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Coups_8h_a711c029f1cf5d3016f809ef3bd117bae}\label{TAD__Coups_8h_a711c029f1cf5d3016f809ef3bd117bae}} 
+void {\bfseries Liste\+Coups\+\_\+supprimer\+IEme\+Coup\+Recursif} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$liste\+\_\+coups, unsigned int i)
+\item 
+\mbox{\hyperlink{structCoup}{Coup}} \mbox{\hyperlink{TAD__Coups_8h_aa11e25fba93f79867c6a434bf5c795f5}{Liste\+Coups\+\_\+obtenir\+Coup}} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} liste\+\_\+coups)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne un coup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Coups_8h_af00682a9a1b199446ae8b2ab882ff09d}\label{TAD__Coups_8h_af00682a9a1b199446ae8b2ab882ff09d}} 
+void {\bfseries Liste\+Coups\+\_\+fixer\+Coup} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$liste\+\_\+coups, \mbox{\hyperlink{structCoup}{Coup}} c)
+\item 
+\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} \mbox{\hyperlink{TAD__Coups_8h_a8af59aeedc011ff5db0300434c7f68a0}{Liste\+Coups\+\_\+obtenir\+Liste\+Suivante}} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} liste\+\_\+coups)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la liste suivante de coups. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coups_8h_a3f1c8c6d9670eade867b4faed015de46}{Liste\+Coups\+\_\+fixer\+Liste\+Suivante}} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} liste\+\_\+coups, \mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} liste\+\_\+coups\+\_\+suivante)
+\begin{DoxyCompactList}\small\item\em Procedure qui fixe la liste suivante. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCoups}{Coups}} \mbox{\hyperlink{TAD__Coups_8h_a1605ba44450518076d1da477f495ddb2}{TADCoups\+\_\+coups}} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui creer un historique de \mbox{\hyperlink{structCoups}{Coups}} vide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coups_8h_a9bc957ae91b6152d8ae21a4932582f1f}{TADCoups\+\_\+fixer\+Nb\+Coups}} (\mbox{\hyperlink{structCoups}{Coups}} $\ast$coups, unsigned int nb\+\_\+coups)
+\begin{DoxyCompactList}\small\item\em Procedure qui fixe le nombre de coups. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{TAD__Coups_8h_aca2b1f8d79b36169d588537bba719661}{TADCoups\+\_\+obtenir\+Nb\+Coups}} (\mbox{\hyperlink{structCoups}{Coups}} coups)
+\begin{DoxyCompactList}\small\item\em Procedure qui permet d\textquotesingle{}obtenir le nombre de coups contenus dans un \textquotesingle{}\mbox{\hyperlink{structCoups}{Coups}}\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coups_8h_a2e43cd507db95f020bf2a7a4df997072}{TADCoups\+\_\+fixer\+Liste\+Coups}} (\mbox{\hyperlink{structCoups}{Coups}} $\ast$coups, \mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} l)
+\begin{DoxyCompactList}\small\item\em Procedure qui fixe lea liste de coups dans l historique de coups. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$ \mbox{\hyperlink{TAD__Coups_8h_a8ac3da950b9fc7ef4b8dbec5d05855fa}{TADCoups\+\_\+obtenir\+Liste\+Coups}} (\mbox{\hyperlink{structCoups}{Coups}} $\ast$coups)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet d\textquotesingle{}obtenir la liste des coups contenu dans un \char`\"{}coups\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TAD__Coups_8h_ad9cd377a2d09a2e047e6fa59961405d7}{TADCoups\+\_\+ajouter\+Coup}} (\mbox{\hyperlink{structCoups}{Coups}} $\ast$coups, \mbox{\hyperlink{structCoup}{Coup}} coup)
+\begin{DoxyCompactList}\small\item\em Fonction qui ajoute un coup a l\textquotesingle{}historique de coups. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Coups_8h_ad4590612963ae49773919e20dc6c6564}\label{TAD__Coups_8h_ad4590612963ae49773919e20dc6c6564}} 
+bool {\bfseries TADCoups\+\_\+est\+Vide} (\mbox{\hyperlink{structCoups}{Coups}} coups)
+\item 
+\mbox{\hyperlink{structCoup}{Coup}} \mbox{\hyperlink{TAD__Coups_8h_af2c50bc8c28adfaa117b6e0c61e892de}{TADCoups\+\_\+obtenir\+IEme\+Coup}} (\mbox{\hyperlink{structCoups}{Coups}} coups, unsigned int i)
+\begin{DoxyCompactList}\small\item\em Fonction qui ajoute un coup a l\textquotesingle{}historique de coups à l indice i. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{TAD__Coups_8h_afeec41c97a6064385fe1b4e17bf31b6f}\label{TAD__Coups_8h_afeec41c97a6064385fe1b4e17bf31b6f}} 
+\mbox{\hyperlink{structCoup}{Coup}} {\bfseries TADCoups\+\_\+obtenir\+IEme\+Coup\+Recursif} (\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} liste\+\_\+coups, unsigned int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation du TAD \mbox{\hyperlink{structCoups}{Coups}} pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{TAD__Coups_8h_aa2452a62031d3c5d9a00645c83edfe9e}\label{TAD__Coups_8h_aa2452a62031d3c5d9a00645c83edfe9e}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!ListeCoups\_ajouterCoup@{ListeCoups\_ajouterCoup}}
+\index{ListeCoups\_ajouterCoup@{ListeCoups\_ajouterCoup}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{ListeCoups\_ajouterCoup()}{ListeCoups\_ajouterCoup()}}
+{\footnotesize\ttfamily void Liste\+Coups\+\_\+ajouter\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$}]{liste\+\_\+coups,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Procedure d\textquotesingle{}ajout d\textquotesingle{}un coup à une liste de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$liste\+\_\+coups} & \+: la liste de coups \\
+\hline
+{\em c} & \+: le coup à ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_a3f1c8c6d9670eade867b4faed015de46}\label{TAD__Coups_8h_a3f1c8c6d9670eade867b4faed015de46}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!ListeCoups\_fixerListeSuivante@{ListeCoups\_fixerListeSuivante}}
+\index{ListeCoups\_fixerListeSuivante@{ListeCoups\_fixerListeSuivante}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{ListeCoups\_fixerListeSuivante()}{ListeCoups\_fixerListeSuivante()}}
+{\footnotesize\ttfamily void Liste\+Coups\+\_\+fixer\+Liste\+Suivante (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}}]{liste\+\_\+coups,  }\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}}]{liste\+\_\+coups\+\_\+suivante }\end{DoxyParamCaption})}
+
+
+
+Procedure qui fixe la liste suivante. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em liste\+\_\+coups} & \+: la liste de coups \\
+\hline
+{\em liste\+\_\+coups\+\_\+suivante} & la liste à fixer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_aa11e25fba93f79867c6a434bf5c795f5}\label{TAD__Coups_8h_aa11e25fba93f79867c6a434bf5c795f5}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!ListeCoups\_obtenirCoup@{ListeCoups\_obtenirCoup}}
+\index{ListeCoups\_obtenirCoup@{ListeCoups\_obtenirCoup}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{ListeCoups\_obtenirCoup()}{ListeCoups\_obtenirCoup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoup}{Coup}} Liste\+Coups\+\_\+obtenir\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}}]{liste\+\_\+coups }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne un coup. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$liste\+\_\+coup} & \+: la liste de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoup}{Coup}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_a8af59aeedc011ff5db0300434c7f68a0}\label{TAD__Coups_8h_a8af59aeedc011ff5db0300434c7f68a0}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!ListeCoups\_obtenirListeSuivante@{ListeCoups\_obtenirListeSuivante}}
+\index{ListeCoups\_obtenirListeSuivante@{ListeCoups\_obtenirListeSuivante}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{ListeCoups\_obtenirListeSuivante()}{ListeCoups\_obtenirListeSuivante()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} Liste\+Coups\+\_\+obtenir\+Liste\+Suivante (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}}]{liste\+\_\+coups }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la liste suivante de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em liste\+\_\+coups} & \+: la liste de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Liste\+Coups 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_ad6b48bd4f4143134628692eb4e9d0f64}\label{TAD__Coups_8h_ad6b48bd4f4143134628692eb4e9d0f64}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!ListeCoups\_supprimerCoup@{ListeCoups\_supprimerCoup}}
+\index{ListeCoups\_supprimerCoup@{ListeCoups\_supprimerCoup}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{ListeCoups\_supprimerCoup()}{ListeCoups\_supprimerCoup()}}
+{\footnotesize\ttfamily void Liste\+Coups\+\_\+supprimer\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}} $\ast$}]{liste\+\_\+coups }\end{DoxyParamCaption})}
+
+
+
+Procedure de suppression de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$liste\+\_\+coups} & \+: la liste de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_ad9cd377a2d09a2e047e6fa59961405d7}\label{TAD__Coups_8h_ad9cd377a2d09a2e047e6fa59961405d7}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_ajouterCoup@{TADCoups\_ajouterCoup}}
+\index{TADCoups\_ajouterCoup@{TADCoups\_ajouterCoup}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_ajouterCoup()}{TADCoups\_ajouterCoup()}}
+{\footnotesize\ttfamily void TADCoups\+\_\+ajouter\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}} $\ast$}]{coups,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Fonction qui ajoute un coup a l\textquotesingle{}historique de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique \\
+\hline
+{\em coup} & \+: le coup \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{TAD__Coups_8h_a1605ba44450518076d1da477f495ddb2}\label{TAD__Coups_8h_a1605ba44450518076d1da477f495ddb2}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_coups@{TADCoups\_coups}}
+\index{TADCoups\_coups@{TADCoups\_coups}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_coups()}{TADCoups\_coups()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoups}{Coups}} TADCoups\+\_\+coups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui creer un historique de \mbox{\hyperlink{structCoups}{Coups}} vide. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoups}{Coups}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_a2e43cd507db95f020bf2a7a4df997072}\label{TAD__Coups_8h_a2e43cd507db95f020bf2a7a4df997072}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_fixerListeCoups@{TADCoups\_fixerListeCoups}}
+\index{TADCoups\_fixerListeCoups@{TADCoups\_fixerListeCoups}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_fixerListeCoups()}{TADCoups\_fixerListeCoups()}}
+{\footnotesize\ttfamily void TADCoups\+\_\+fixer\+Liste\+Coups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}} $\ast$}]{coups,  }\item[{\mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}}]{l }\end{DoxyParamCaption})}
+
+
+
+Procedure qui fixe lea liste de coups dans l historique de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique de coups \\
+\hline
+{\em nb\+\_\+coups} & le nombre de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_a9bc957ae91b6152d8ae21a4932582f1f}\label{TAD__Coups_8h_a9bc957ae91b6152d8ae21a4932582f1f}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_fixerNbCoups@{TADCoups\_fixerNbCoups}}
+\index{TADCoups\_fixerNbCoups@{TADCoups\_fixerNbCoups}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_fixerNbCoups()}{TADCoups\_fixerNbCoups()}}
+{\footnotesize\ttfamily void TADCoups\+\_\+fixer\+Nb\+Coups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}} $\ast$}]{coups,  }\item[{unsigned int}]{nb\+\_\+coups }\end{DoxyParamCaption})}
+
+
+
+Procedure qui fixe le nombre de coups. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique de coups \\
+\hline
+{\em nb\+\_\+coups} & le nombre de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_af2c50bc8c28adfaa117b6e0c61e892de}\label{TAD__Coups_8h_af2c50bc8c28adfaa117b6e0c61e892de}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_obtenirIEmeCoup@{TADCoups\_obtenirIEmeCoup}}
+\index{TADCoups\_obtenirIEmeCoup@{TADCoups\_obtenirIEmeCoup}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_obtenirIEmeCoup()}{TADCoups\_obtenirIEmeCoup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoup}{Coup}} TADCoups\+\_\+obtenir\+IEme\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}}}]{coups,  }\item[{unsigned int}]{i }\end{DoxyParamCaption})}
+
+
+
+Fonction qui ajoute un coup a l\textquotesingle{}historique de coups à l indice i. 
+
+Fonction qui ajoute un coup a la liste de couos à l indice i recursivement.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique \\
+\hline
+{\em i} & \+: l\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoups}{Coups}}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Paramètres}
+{\em liste\+\_\+coups} & \+: liste des coups \\
+\hline
+{\em i} & \+: l\textquotesingle{}indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoups}{Coups}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_a8ac3da950b9fc7ef4b8dbec5d05855fa}\label{TAD__Coups_8h_a8ac3da950b9fc7ef4b8dbec5d05855fa}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_obtenirListeCoups@{TADCoups\_obtenirListeCoups}}
+\index{TADCoups\_obtenirListeCoups@{TADCoups\_obtenirListeCoups}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_obtenirListeCoups()}{TADCoups\_obtenirListeCoups()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{TAD__Coups_8h_a96c72ce298774629ab335a691f54b891}{Liste\+Coups}}$\ast$ TADCoups\+\_\+obtenir\+Liste\+Coups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}} $\ast$}]{coups }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet d\textquotesingle{}obtenir la liste des coups contenu dans un \char`\"{}coups\char`\"{}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique de coups dont on veut la liste \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Liste\+Coups 
+\end{DoxyReturn}
+\mbox{\Hypertarget{TAD__Coups_8h_aca2b1f8d79b36169d588537bba719661}\label{TAD__Coups_8h_aca2b1f8d79b36169d588537bba719661}} 
+\index{TAD\_Coups.h@{TAD\_Coups.h}!TADCoups\_obtenirNbCoups@{TADCoups\_obtenirNbCoups}}
+\index{TADCoups\_obtenirNbCoups@{TADCoups\_obtenirNbCoups}!TAD\_Coups.h@{TAD\_Coups.h}}
+\doxysubsubsection{\texorpdfstring{TADCoups\_obtenirNbCoups()}{TADCoups\_obtenirNbCoups()}}
+{\footnotesize\ttfamily unsigned int TADCoups\+\_\+obtenir\+Nb\+Coups (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCoups}{Coups}}}]{coups }\end{DoxyParamCaption})}
+
+
+
+Procedure qui permet d\textquotesingle{}obtenir le nombre de coups contenus dans un \textquotesingle{}\mbox{\hyperlink{structCoups}{Coups}}\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & \+: l\textquotesingle{}historique de coups \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int 
+\end{DoxyReturn}

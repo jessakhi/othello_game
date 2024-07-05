@@ -1,0 +1,374 @@
+\documentclass{report}
+\usepackage[french]{babel}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{algorithme}
+\usepackage{comment}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{hyperref} 
+\usepackage{tabularx}
+\usepackage{parskip}
+
+\setlength{\parindent}{20pt}
+
+
+\hypersetup{ 
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\lstset{language=C,
+	literate=
+  {²}{{\textsuperscript{2}}}1
+  {⁴}{{\textsuperscript{4}}}1
+  {⁶}{{\textsuperscript{6}}}1
+  {⁸}{{\textsuperscript{8}}}1
+  {€}{{\euro{}}}1
+  {é}{{\'e}}1
+  {è}{{\`{e}}}1
+  {ê}{{\^{e}}}1
+  {ë}{{\¨{e}}}1
+  {É}{{\'{E}}}1
+  {Ê}{{\^{E}}}1
+  {û}{{\^{u}}}1
+  {ù}{{\`{u}}}1
+  {â}{{\^{a}}}1
+  {à}{{\`{a}}}1
+  {á}{{\'{a}}}1
+  {ã}{{\~{a}}}1
+  {Á}{{\'{A}}}1
+  {Â}{{\^{A}}}1
+  {Ã}{{\~{A}}}1
+  {ç}{{\c{c}}}1
+  {Ç}{{\c{C}}}1
+  {õ}{{\~{o}}}1
+  {ó}{{\'{o}}}1
+  {ô}{{\^{o}}}1
+  {Õ}{{\~{O}}}1
+  {Ó}{{\'{O}}}1
+  {Ô}{{\^{O}}}1
+  {î}{{\^{i}}}1
+  {Î}{{\^{I}}}1
+  {í}{{\'{i}}}1
+  {Í}{{\~{Í}}}1,
+	breaklines,
+	frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    numbers=left, % display line numbers on the left
+    commentstyle=\color{violet}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{red} % string color
+}
+\title{Projet Othello - Rapport}
+\author{Benchekroun Yasmine, Charles Lucas, Essakhi Jihane, Foyer Laurent}
+
+\begin{document}
+  
+\maketitle
+
+\chapter{Introduction}
+
+    L'Othello, une variante du Reversi, est un jeu de stratégie se jouant à deux joueurs sur un plateau de 8x8 cases : l'objectif de ce jeu est de placer des pions tour par tour de manière à contrôler le plus de cases possible sur le plateau. \par
+    
+    Le projet détaillé dans ce rapport, réalisé au cours de 10 semaines du 25 octobre 2022 au 3 janvier 2023, consiste à la programmation d'un jeu d'Othello permettant de jouer contre un ordinateur via le développement d'une IA. Celui-ci doit permettre au joueur de choisir sa couleur (noir ou blanc) ainsi que la difficulté de l'IA (la profondeur, qui le plus élevée elle est rend en principe l'IA meilleure au jeu). De plus, le jeu doit pouvoir participer à un mode "tournoi" dans lequel il pourra affronter l'IA d'un autre programme en communiquant via un protocole prédéterminé. \par
+
+    Développé en C, celui-ci a dû être conçu suivant l'ensemble des étapes du cycle en V : analyse, conception préliminaire, conception détaillée, et développement, ainsi que la réalisation de leurs tests associés. Ce rapport détaille dans son ensemble les fonctions et algorithmes utilisées dans la réalisation du jeu d'Othello.
+
+\chapter{Analyse descendante}
+    \vspace*{2cm}
+    \noindent
+    \makebox[\textwidth]{\includegraphics[scale=0.26, angle=0]{Analyse_descendante.pdf}}%
+    \vspace*{\fill}
+\chapter{Analyses}
+\section{Présentation des TAD}
+
+    \subsection{TAD Couleur}
+    \begin{tad}
+    \tadNom{Couleur}
+    \tadDependances{\booleen}
+    \begin{tadOperations}{couleur}
+    \tadOperation{couleur}{\booleen}{\tadUnParam{Couleur}}
+    \tadOperation{couleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
+    \tadOperation{couleurIdentiques}{\tadDeuxParams{Couleur}{Couleur}}{\tadUnParam{\booleen}}
+    \end{tadOperations}
+    \begin{tadAxiomes}
+      \tadAxiome{$couleur(1) = BLANC$}
+      \tadAxiome{$couleur(0) = NOIR$}
+    \end{tadAxiomes}
+    \end{tad} 
+    
+    \subsection{TAD Pion}
+    \begin{tad}
+    \tadNom{Pion}
+    \tadDependances{Position, Couleur}
+    \begin{tadOperations}{pion}
+      \tadOperation{pion}{\tadDeuxParams{Couleur}{Position}}{\tadUnParam{Pion}}
+      \tadOperation{obtenirPosition}{\tadUnParam{Pion}}{\tadUnParam{Position}}
+      \tadOperation{obtenirCouleur}{\tadUnParam{Pion}}{\tadUnParam{Couleur}}
+      \tadOperation{changerCouleur}{\tadUnParam{Pion}}{\tadUnParam{Pion}}
+      \tadOperation{estPlace}{\tadUnParam{Pion}}{\tadUnParam{\booleen}}
+      \tadOperation{fixerCouleur}{\tadDeuxParams{Pion}{Couleur}}{\tadUnParam{Pion}}
+      
+    \end{tadOperations}
+    \begin{tadAxiomes}
+      \tadAxiome{si $obtenirCouleur(p1) = NOIR$ alors $obtenirCouleur(changerCouleur(p1)) = BLANC$}
+      \tadAxiome{si $obtenirCouleur(p1) = BLANC$  alors $obtenirCouleur(changerCouleur(p1)) = NOIR$}
+    \end{tadAxiomes}
+    \end{tad}  
+    
+    \subsection{TAD Position}
+    \begin{tad}
+    \tadNom{Position}
+    \tadDependances{Naturel Non Nul, Booléen, Plateau}
+    \begin{tadOperations}{position}
+      \tadOperation{position}{\tadDeuxParams{$[1..8]$}{$[1..8]$}}{\tadUnParam{Position}}
+      \tadOperation{obtenirLigne}{\tadUnParam{Position}}{\tadUnParam{$[1..8]$}}
+      \tadOperation{obtenirColonne}{\tadUnParam{Position}}{\tadUnParam{$[1..8]$}}
+      
+    \end{tadOperations}
+    \begin{tadAxiomes}
+      \tadAxiome{$obtenirLigne(position(x,y)) = x$}
+      \tadAxiome{$obtenirColonne(position(x,y)) = y$}
+    \end{tadAxiomes}
+    \end{tad}  
+    
+    \subsection{TAD Plateau}
+    \begin{tad}
+    \tadNom{Plateau}
+    \tadDependances{Naturel Non Nul, Couleur, Naturel , Pion}
+    \begin{tadOperations}{plateau}
+      \tadOperation{plateau}{}{\tadUnParam{Plateau}}
+      \tadOperation{obtenirHauteur}{\tadUnParam{Plateau}}{\tadUnParam{\naturel}}
+      \tadOperation{obtenirLargeur}{\tadUnParam{Plateau}}{\tadUnParam{\naturel}}
+      \tadOperation{testerFin}{\tadUnParam{Plateau}}{\tadUnParam{\booleen}}
+      \tadOperation{estplein}{\tadUnParam{Plateau}}{\tadUnParam{\booleen}}
+      \tadOperation{obtenirPion}{\tadDeuxParams{Plateau}{Position}}{\tadUnParam{Pion}}
+      \tadOperation{nbPionsDUneCouleur}{\tadDeuxParams{Plateau}{Couleur}}{\tadUnParam{\naturel}}
+      \tadOperation{placerPion}{\tadDeuxParams{Plateau}{Pion}}{\tadUnParam{Plateau}}
+      \tadOperation{memePlateau}{\tadDeuxParams{Plateau}{Plateau}}{\tadUnParam{Plateau}}
+      \tadOperation{copier}{\tadUnParam{Plateau}}{\tadUnParam{Plateau}}
+      \tadOperation{effacer}{\tadUnParam{Plateau}}{\tadUnParam{Plateau}}
+      \tadOperation{mettreÀJourPlateau}{\tadUnParam{Plateau}}{\tadUnParam{Plateau}}
+      
+    \end{tadOperations}
+    \end{tad}  
+
+    \subsection{TAD Coup}
+    \begin{tad}
+    \tadNom{Coup}
+    \tadDependances{Pion, Plateau}
+    \begin{tadOperations}{coup}
+      \tadOperation{coup}{\tadUnParam{Pion}}{\tadUnParam{Coup}}
+      \tadOperation{jouerCoup}{\tadDeuxParams{Plateau}{Coup}}{\tadUnParam{Plateau}}
+      \tadOperation{obtenirPion}{\tadUnParam{coup}}{\tadUnParam{Pion}}
+    
+      
+    \end{tadOperations}
+    \end{tad}
+    
+        
+        
+    \subsection{TAD Coups}
+    \begin{tad}
+    \tadNom{Coups}
+    \tadDependances{Coup, Booléen, Naturel , ListeCoups}
+    \begin{tadOperations}{coups}
+      \tadOperation{coups}{}{\tadUnParam{Coups}}
+      \tadOperation{ajouterCoup}{\tadDeuxParams{coups}{Coup}}{\tadUnParam{Coups}}
+      \tadOperation{estVide}{\tadUnParam{Coups}}{\tadUnParam{\booleen}}
+      \tadOperation{nbCoups}{\tadUnParam{Coups}}{\tadUnParam{\naturel}}
+      \tadOperation{obtenirIEmeCoup}{\tadDeuxParams{Coups}{\naturel}}{\tadUnParam{Coup}}
+    \end{tadOperations}
+
+    
+    \begin{tadAxiomes}
+      \tadAxiome{$estVide(coups())$}
+      \tadAxiome{non $estVide(ajouterCoup(cps,c))$}
+    \end{tadAxiomes}
+    \end{tad}
+    \section{Conception préliminaire}
+        \subsection{ Signatures des fonction / procédures utilisées }
+        \begin{itemize}
+         \item {\tt Procédure TO\_tournoi( E couleur : Couleur , Profondeur: \naturel )}
+         \item{\tt Procédure JEU\_faireUnePartie( E couleur\_Joueur : Couleur)}
+         \item{ \tt fonction GP\_convertirCoordonneeEnPosition ( coord : Chaine de caractères) : Position}
+         \item{\tt fonction GP\_intialiserPlateau() : Plateau }
+         \item{\tt procédure JEU\_Jouer (E couleur\_joueur\_courant : Couleur  , coup : Coup , E/S p : Plateau) }
+         \item{\tt fonction JEU\_testerFin(p:Plateau):\booleen }
+         \item{\tt  fonction GP\_afficherPlateau(P : plateau)}
+         \item{\tt  fonction JEU\_troouverVainqueur(p : Plateau):Couleur}
+         \item{\tt fonction JEU\_trouverEgalite(p : Plateau): \booleen}
+         \item{\tt  procédure IA\_calculerScore( E p : Plateau , E/S score\_blanc , score\_noir: Naturel )}
+         \item{ \tt fonction GP\_tourJouable( p : Plateau , couleur\_joueur : Couleur) : \booleen}
+         \item{\tt  fonction IA\_obtenirCoupIA (p:Plateau , couleur\_joueur\_courant : Couleur , ligne : \naturel, colonne : \naturel , profondeur : \naturel ):Coup}
+         \item{\tt fonction IA\_scoreDUnCoup (p:Plateau , couleur\_joueur : Couleur , profondeur : \naturel}:\naturel
+          
+           \item {\tt fonction IA\_evaluer(p : Plateau, couleur\_joueur :Couleur) : Entier}
+           \item {\tt fonction IA\_score(p : Plateau, couleur\_joueur :Couleur) : Entier}
+           \item {\tt fonction minMax(p : Plateau, couleur\_joueur\_courant , couleur\_joueur\_referent : Couleur) : Entier}
+           
+         \item{\tt fonction IA\_obtenirCoupsPossibles(p : Plateau , couleur\_joueur : Couleur):Coups}
+         \item{\tt fonction GP\_max(nb1 , nb2 : Entier):Entier}
+         \item{\tt fonction GP\_min(nb1 , nb2 : Entier):Entier}
+         \item{\tt fonction IA\_coupValide(p : Plateau , coup : Coup):\booleen}
+         \item{\tt  fonction JEU\_obtenirCoupH (p : Plateau , couleur\_Joueur : Couleur , ligne : \naturel , colonne : \naturel , profondeur : \naturel): Coup}
+         \item{\tt Procédure GP\_MiseAJourPlateau( E coup : Coup , E/S p: Plateau)}
+          
+         \item{\tt fonction GP\_testerDirection(p : Plateau pos : Position dir : Naturel c : Couleur)\booleen}
+         \item{\tt fonction GP\_positionInvalide(pos : Position):\booleen}
+         \item{\tt fonction JEU\_seDeplacerDansLaDirection(pos : Position , dir : \naturel): Position}
+       
+        
+        \end{itemize}
+    \chapter {Conception détaillée}
+    
+        \section{Conception détaillée des TAD}
+         \begin{itemize}
+             \item TAD Couleur = Structure 
+             \begin{itemize}
+             \item couleur = \booleen
+             \end{itemize}
+             \item TAD Pion = Structure
+             \begin{itemize}
+                 \item position = Position
+                 \item couleur = Couleur
+                 \item estPlacé = \booleen
+             \end{itemize}
+             \item TAD Position = Structure
+             \begin{itemize}
+                 \item ligne = 1..8
+                 \item colonne = 1..8
+             \end{itemize}
+             \item TAD Plateau = Structure
+             \begin{itemize}
+                 \item lesPions = Tableau[8][8] de Pions
+                 \item estPlein = Booléen
+                 \item nbPionsPlaces = 1..64
+             \end{itemize}
+             \item Coup = Pion
+             \item Coups = Liste [1..MAX] de Coup
+         \end{itemize}
+         
+         \section{Conception détaillée des fonctions et procédures}
+         
+
+            \subsubsection{Fonctions et procédures qui permettent de jouer une partie}
+            \subsubsection{ Procédure JEU\_faireUnePartie}
+            
+            \input{CD_JEU/JEU_FaireUnePartie.tex}  \bigskip 
+         
+            \subsubsection{ Procédure JEU\_jouer}
+            \input{CD_JEU/JEU_jouer.tex}  \bigskip 
+            
+             \subsubsection{Fonction JEU\_obtenirCoupH}
+              \input{CD_JEU/JEU_obtenirCoupH.tex}  \bigskip 
+            
+             \subsubsection{Fonction seDeplacerDansLaDirection}
+              \input{CD_JEU/seDeplacerDansLaDirection.tex}  \bigskip 
+            
+             \subsubsection{JEU\_trouverVainqueur}
+              \input{CD_JEU/JEU_trouverVainqueur.tex}  \bigskip 
+
+               \subsubsection{fonction JEU\_trouverEgalite}
+                \input{CD_JEU/JEU_trouverEgalite.tex}  \bigskip  
+            
+               \subsubsection{JEU\_testerFin}
+                \input{CD_JEU/JEU_testerFin.tex}  \bigskip 
+             
+             \subsubsection{Procédure JEU\_calculerScore}
+              \input{CD_JEU/JEU_calculerScore.tex}  \bigskip 
+             
+             
+
+             % Fonctions de GestionPlateau
+              \subsubsection{Fonctions \ Procédures liées à la géstion du plateau}
+             \subsubsection{Fonction GP\_convertirCoordonneeEnPosition}
+                \input{CD_GestionPlateau/GP_convertirCoordonneeEnPosition.tex}  \bigskip 
+             \subsubsection{Procédure GP\_afficherPlateau}
+                \input{CD_GestionPlateau/GP_afficherPlateau.tex}   \bigskip
+             \subsubsection{Fonction GP\_initialiserPlateau}
+                \input{CD_GestionPlateau/GP_initialiserPlateau.tex}   \bigskip 
+             \subsubsection{Fonction GP\_positionInvalide}
+                \input{CD_GestionPlateau/GP_positionInvalide.tex}   \bigskip    
+             \subsubsection{Fonction GP\_tourJouable}
+                \input{CD_GestionPlateau/GP_tourJouable.tex}       \bigskip
+             \subsubsection{Fonction GP\_testerDirection}
+                \input{CD_GestionPlateau/GP_testerDirection.tex}    \bigskip  
+             \subsubsection{Fonction GP\_miseAJourPlateau}
+                \input{CD_GestionPlateau/GP_miseAJourPlateau.tex}  \bigskip    
+             \subsubsection{Fonction GP\_max}
+                \input{CD_GestionPlateau/GP_max.tex}      \bigskip
+             \subsubsection{Fonction GP\_min}
+                \input{CD_GestionPlateau/GP_min.tex}      \bigskip
+             \subsubsection{Fonction GP\_nbPionsContigus}
+                \input{CD_GestionPlateau/GP_nbPionsContigus.tex}  \bigskip                
+             
+             
+               \subsubsection{Fonctions et procédures liés à l'IA}
+               
+               \subsubsection{Fonction IA\_coupValide}
+               \input{CD_IA/IA_coupValide.tex}  \bigskip        
+               
+               \subsubsection{Fonction IA\_evaluer}
+                 \input{CD_IA/IA_evaluer.tex}  \bigskip  
+
+                \subsubsection{Fonction IA\_minMax}
+                  \input{CD_IA/IA_minMax.tex}  \bigskip  
+               
+     \subsubsection{Fonction IA\_obtenirCoupIA}
+      \input{CD_IA/IA_obtenirCoupIA.tex}  \bigskip  
+      
+     \subsubsection{Fonction IA\_obtenirCoupsPossibles}
+     \input{CD_IA/IA_obtenirCoupsPossibles.tex}  \bigskip  
+
+     \subsubsection{Fonction IA\_score}
+      \input{CD_IA/IA_score.tex}  \bigskip  
+    
+     \subsubsection{Fonction IA\_scoreDUnCoup}
+      \input{CD_IA/IA_scoreDUnCoup.tex}  \bigskip  
+    
+       \subsubsection{Procédure qui permet de faire un Tournoi}
+     \subsubsection{Procédure TO\_tournoi}
+      \input{TOURNOI/TO_tournoi.tex}  \bigskip  
+
+      \chapter{Implémentation en C}
+      \input{codeC/codeC.tex} \bigskip  
+
+      \chapter{Conclusion}
+    \indent Après 10 semaines de travail, nous sommes parvenus à l'élaboration d'un jeu d'Othello pouvant être joué sur terminal. Celui-ci a été réalisé via la conception de TAD réprésentant l'ensemble des éléments nécessaires pour le fonctionnement du jeu : Couleur, Position, Pion, Plateau, Coup, et Coups. De plus, un nombre d'algorithmes répresentant le fonctionnement logique du plateau, la gestion d'une partie dont la répartition des tours et le comptage des points, ainsi que la réalisation d'une IA basée sur l'algorithme MinMax ont notamment été élaborés pour mener à fin ce projet. 
+
+    \bigskip
+    \underline{D'un point de vu personnel, ce projet nous aura permis :}
+    \par
+    \begin{itemize}
+        \item D'exercer la gestion de projet via la plateforme collaborative Gitlab
+        \item Mettre en application l'ensemble des étapes du cycle en V
+        \item Maîtriser l'élaboration et l'usage de types abstraits de données
+        \item Mettre en oeuvre des fonctions et procédures avancées
+        \item Comprendre et réaliser une IA basée sur l'algorithme MinMax
+        \item Appronfondir et aiguiser notre connaissance du langage C
+        \item Concevoir un ensemble de tests associées aux algorithmes développés
+        \item Apprendre la rédaction d'un makefile
+        \item Rédiger de la documentation via Doxygen et un rapport rédigé en LaTeX
+    \end{itemize}
+
+    \bigskip \bigskip
+    Le projet a été réparti au sein du groupe selon le tableau suivant :
+    
+    \vspace*{1pt}
+    \noindent
+    \makebox[\textwidth]{\includegraphics[scale=1, angle=0]{table_rep.pdf}}%
+    \vspace*{\fill}
+
+\end{document}

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello:  Fichier source de include/TAD_Coups.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TAD_Coups.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="TAD__Coups_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef __COUPS__</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define __COUPS__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="TAD__Coup_8h.html">TAD_Coup.h</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* structures */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structNcoups.html">Ncoups</a>* <a class="code" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structNcoups.html">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structNcoups.html">Ncoups</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="structCoup.html">Coup</a> coup;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="structNcoups.html">ListeCoups</a> listeSuivante;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="TAD__Coups_8h.html#abf515da1408ccf5dc816ff816df2536f">   29</a></span>&#160;}<a class="code" href="TAD__Coups_8h.html#abf515da1408ccf5dc816ff816df2536f">Ncoups</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structCoups.html">   37</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbCoups;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="structNcoups.html">ListeCoups</a> listecoups;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}<a class="code" href="structCoups.html">Coups</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* Headers des fonctions de Liste Coups (privées) */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#aa2452a62031d3c5d9a00645c83edfe9e">ListeCoups_ajouterCoup</a>(<a class="code" href="structNcoups.html">ListeCoups</a> *liste_coups, <a class="code" href="structCoup.html">Coup</a> c);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#ad6b48bd4f4143134628692eb4e9d0f64">ListeCoups_supprimerCoup</a>(<a class="code" href="structNcoups.html">ListeCoups</a> *liste_coups);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> ListeCoups_supprimerIEmeCoupRecursif(<a class="code" href="structNcoups.html">ListeCoups</a> *liste_coups, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="structCoup.html">Coup</a> <a class="code" href="TAD__Coups_8h.html#aa11e25fba93f79867c6a434bf5c795f5">ListeCoups_obtenirCoup</a>(<a class="code" href="structNcoups.html">ListeCoups</a> liste_coups);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> ListeCoups_fixerCoup(<a class="code" href="structNcoups.html">ListeCoups</a>* liste_coups, <a class="code" href="structCoup.html">Coup</a> c);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<a class="code" href="structNcoups.html">ListeCoups</a> <a class="code" href="TAD__Coups_8h.html#a8af59aeedc011ff5db0300434c7f68a0">ListeCoups_obtenirListeSuivante</a>(<a class="code" href="structNcoups.html">ListeCoups</a> liste_coups);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#a3f1c8c6d9670eade867b4faed015de46">ListeCoups_fixerListeSuivante</a>(<a class="code" href="structNcoups.html">ListeCoups</a> liste_coups, <a class="code" href="structNcoups.html">ListeCoups</a> liste_coups_suivante);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="structCoups.html">Coups</a> <a class="code" href="TAD__Coups_8h.html#a1605ba44450518076d1da477f495ddb2">TADCoups_coups</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="comment">/* Headers des fonctions de Coups (publiques) */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#a9bc957ae91b6152d8ae21a4932582f1f">TADCoups_fixerNbCoups</a>(<a class="code" href="structCoups.html">Coups</a> *coups, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb_coups);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="TAD__Coups_8h.html#aca2b1f8d79b36169d588537bba719661">TADCoups_obtenirNbCoups</a>(<a class="code" href="structCoups.html">Coups</a> coups);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#a2e43cd507db95f020bf2a7a4df997072">TADCoups_fixerListeCoups</a>(<a class="code" href="structCoups.html">Coups</a> *coups, <a class="code" href="structNcoups.html">ListeCoups</a> l);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<a class="code" href="structCoups.html">Coups</a> <a class="code" href="TAD__Coups_8h.html#a1605ba44450518076d1da477f495ddb2">TADCoups_coups</a> ();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<a class="code" href="structNcoups.html">ListeCoups</a> *<a class="code" href="TAD__Coups_8h.html#a8ac3da950b9fc7ef4b8dbec5d05855fa">TADCoups_obtenirListeCoups</a>(<a class="code" href="structCoups.html">Coups</a> *coups);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">void</span> <a class="code" href="TAD__Coups_8h.html#ad9cd377a2d09a2e047e6fa59961405d7">TADCoups_ajouterCoup</a>(<a class="code" href="structCoups.html">Coups</a> *coups, <a class="code" href="structCoup.html">Coup</a> coup);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keywordtype">bool</span> TADCoups_estVide (<a class="code" href="structCoups.html">Coups</a> coups);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<a class="code" href="structCoup.html">Coup</a> <a class="code" href="TAD__Coups_8h.html#af2c50bc8c28adfaa117b6e0c61e892de">TADCoups_obtenirIEmeCoup</a>(<a class="code" href="structCoups.html">Coups</a> coups, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<a class="code" href="structCoup.html">Coup</a> TADCoups_obtenirIEmeCoupRecursif(<a class="code" href="structNcoups.html">ListeCoups</a> liste_coups,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aTAD__Coup_8h_html"><div class="ttname"><a href="TAD__Coup_8h.html">TAD_Coup.h</a></div><div class="ttdoc">Implementation du TAD Coup pour le jeu d'Othello.</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a1605ba44450518076d1da477f495ddb2"><div class="ttname"><a href="TAD__Coups_8h.html#a1605ba44450518076d1da477f495ddb2">TADCoups_coups</a></div><div class="ttdeci">Coups TADCoups_coups()</div><div class="ttdoc">Fonction qui creer un historique de Coups vide.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:69</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a2e43cd507db95f020bf2a7a4df997072"><div class="ttname"><a href="TAD__Coups_8h.html#a2e43cd507db95f020bf2a7a4df997072">TADCoups_fixerListeCoups</a></div><div class="ttdeci">void TADCoups_fixerListeCoups(Coups *coups, ListeCoups l)</div><div class="ttdoc">Procedure qui fixe lea liste de coups dans l historique de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:61</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a3f1c8c6d9670eade867b4faed015de46"><div class="ttname"><a href="TAD__Coups_8h.html#a3f1c8c6d9670eade867b4faed015de46">ListeCoups_fixerListeSuivante</a></div><div class="ttdeci">void ListeCoups_fixerListeSuivante(ListeCoups liste_coups, ListeCoups liste_coups_suivante)</div><div class="ttdoc">Procedure qui fixe la liste suivante.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:47</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a8ac3da950b9fc7ef4b8dbec5d05855fa"><div class="ttname"><a href="TAD__Coups_8h.html#a8ac3da950b9fc7ef4b8dbec5d05855fa">TADCoups_obtenirListeCoups</a></div><div class="ttdeci">ListeCoups * TADCoups_obtenirListeCoups(Coups *coups)</div><div class="ttdoc">Fonction qui permet d'obtenir la liste des coups contenu dans un &quot;coups&quot;.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:78</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a8af59aeedc011ff5db0300434c7f68a0"><div class="ttname"><a href="TAD__Coups_8h.html#a8af59aeedc011ff5db0300434c7f68a0">ListeCoups_obtenirListeSuivante</a></div><div class="ttdeci">ListeCoups ListeCoups_obtenirListeSuivante(ListeCoups liste_coups)</div><div class="ttdoc">Fonction qui permet d'obtenir la liste suivante de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:43</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a96c72ce298774629ab335a691f54b891"><div class="ttname"><a href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a></div><div class="ttdeci">struct Ncoups * ListeCoups</div><div class="ttdoc">Le type ListesCoups est un pointeur sur des noeud de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.h:21</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_a9bc957ae91b6152d8ae21a4932582f1f"><div class="ttname"><a href="TAD__Coups_8h.html#a9bc957ae91b6152d8ae21a4932582f1f">TADCoups_fixerNbCoups</a></div><div class="ttdeci">void TADCoups_fixerNbCoups(Coups *coups, unsigned int nb_coups)</div><div class="ttdoc">Procedure qui fixe le nombre de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:57</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_aa11e25fba93f79867c6a434bf5c795f5"><div class="ttname"><a href="TAD__Coups_8h.html#aa11e25fba93f79867c6a434bf5c795f5">ListeCoups_obtenirCoup</a></div><div class="ttdeci">Coup ListeCoups_obtenirCoup(ListeCoups liste_coups)</div><div class="ttdoc">Fonction qui retourne un coup.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:35</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_aa2452a62031d3c5d9a00645c83edfe9e"><div class="ttname"><a href="TAD__Coups_8h.html#aa2452a62031d3c5d9a00645c83edfe9e">ListeCoups_ajouterCoup</a></div><div class="ttdeci">void ListeCoups_ajouterCoup(ListeCoups *liste_coups, Coup c)</div><div class="ttdoc">Procedure d'ajout d'un coup à une liste de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:11</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_abf515da1408ccf5dc816ff816df2536f"><div class="ttname"><a href="TAD__Coups_8h.html#abf515da1408ccf5dc816ff816df2536f">Ncoups</a></div><div class="ttdeci">struct Ncoups Ncoups</div><div class="ttdoc">Le type Ncoups est un noeud de coups qui sera utilisé pour representer le type ListeCoups.</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_aca2b1f8d79b36169d588537bba719661"><div class="ttname"><a href="TAD__Coups_8h.html#aca2b1f8d79b36169d588537bba719661">TADCoups_obtenirNbCoups</a></div><div class="ttdeci">unsigned int TADCoups_obtenirNbCoups(Coups coups)</div><div class="ttdoc">Procedure qui permet d'obtenir le nombre de coups contenus dans un 'Coups'.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:65</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_ad6b48bd4f4143134628692eb4e9d0f64"><div class="ttname"><a href="TAD__Coups_8h.html#ad6b48bd4f4143134628692eb4e9d0f64">ListeCoups_supprimerCoup</a></div><div class="ttdeci">void ListeCoups_supprimerCoup(ListeCoups *liste_coups)</div><div class="ttdoc">Procedure de suppression de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:19</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_ad9cd377a2d09a2e047e6fa59961405d7"><div class="ttname"><a href="TAD__Coups_8h.html#ad9cd377a2d09a2e047e6fa59961405d7">TADCoups_ajouterCoup</a></div><div class="ttdeci">void TADCoups_ajouterCoup(Coups *coups, Coup coup)</div><div class="ttdoc">Fonction qui ajoute un coup a l'historique de coups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:82</div></div>
+<div class="ttc" id="aTAD__Coups_8h_html_af2c50bc8c28adfaa117b6e0c61e892de"><div class="ttname"><a href="TAD__Coups_8h.html#af2c50bc8c28adfaa117b6e0c61e892de">TADCoups_obtenirIEmeCoup</a></div><div class="ttdeci">Coup TADCoups_obtenirIEmeCoup(Coups coups, unsigned int i)</div><div class="ttdoc">Fonction qui ajoute un coup a l'historique de coups à l indice i.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.c:92</div></div>
+<div class="ttc" id="astructCoup_html"><div class="ttname"><a href="structCoup.html">Coup</a></div><div class="ttdoc">Le type Coup est un pion.</div><div class="ttdef"><b>Definition:</b> TAD_Coup.h:20</div></div>
+<div class="ttc" id="astructCoups_html"><div class="ttname"><a href="structCoups.html">Coups</a></div><div class="ttdoc">Le type Coups est une Liste de coups</div><div class="ttdef"><b>Definition:</b> TAD_Coups.h:37</div></div>
+<div class="ttc" id="astructNcoups_html"><div class="ttname"><a href="structNcoups.html">Ncoups</a></div><div class="ttdoc">Le type Ncoups est un noeud de coups qui sera utilisé pour representer le type ListeCoups.</div><div class="ttdef"><b>Definition:</b> TAD_Coups.h:26</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

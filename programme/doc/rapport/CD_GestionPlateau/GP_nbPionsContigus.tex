@@ -1,0 +1,35 @@
+
+\begin{algorithme}
+\fonction{GP\_nbPionsContigus}{p : Plateau, pion : pion}{\naturel}
+{
+    resultat, dir : \naturel \\
+    directionValide : \booleen \\
+    pos : Position
+}
+{
+    \pour{dir}{0}{8}{}{
+        \affecter{directionValide}{GP\_testerDirection(p, pos, dir, TADPion\_obtenirCouleur(pion))}
+        \tantque{sequenceDePions(p, pos, couleur\_joueur) ET directionValide}{
+            \affecter{pos}{JEU\_seDeplacerDansLaDirection(pos, dir)}
+            \affecter{resultat}{resultat + 1}
+        }
+    }
+    \retourner{resultat}
+}
+
+\begin{comment}
+fonction GP_nbPionsContigus(p: Plateau, pion: Pion): Naturel
+déclaration: résultat, dir: Naturel, directionValide: Booléen, pos: Position
+
+début
+    pour dir allant de 0 à 8 faire:
+        directionValide <- GP_testerDirection(p, pos, dir, TADPion_obtenirCouleur(pion))
+        tant que NON !TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)),TADPion_obtenirCouleur(pion))) ET directionValide
+            pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+            resultat <- resultat + 1
+        fin tant que
+    fin pour
+    retourner resultat
+fin
+\end{comment}
+\end{algorithme}

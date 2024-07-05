@@ -1,0 +1,9 @@
+\begin{algorithme}
+\procedure{JEU\_jouer}{\paramEntreeSortie{p : Plateau}
+            \paramEntree{ couleur\_joueur\_courant : Couleur}}{coup\_joue : Coup }{
+            \sialorssinon{GP\_tourJouable(p, couleur\_joueur\_courant)}{
+            \affecter{coup\_joue}{obtenirCoup(p,couleur\_joueur\_courant,3)
+            \instruction{ JEU\_jouerCoup(p,coup\_joue)}
+            \instruction{GP\_miseAJourPlateau(p,coup\_joue)}
+            }}{\ecrire{" Tour sauté !"}}}
+\end{algorithme}

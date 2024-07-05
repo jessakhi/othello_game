@@ -1,0 +1,65 @@
+\hypertarget{IA__ScoreDUnCoup_8h}{}\doxysection{Référence du fichier include/\+IA\+\_\+\+Score\+DUn\+Coup.h}
+\label{IA__ScoreDUnCoup_8h}\index{include/IA\_ScoreDUnCoup.h@{include/IA\_ScoreDUnCoup.h}}
+
+
+Implementation de la fonction qui permet à l IA de calculer le score d\textquotesingle{}un coup pour le jeu d\textquotesingle{}Othello.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Pion.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de IA\+\_\+\+Score\+DUn\+Coup.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{IA__ScoreDUnCoup_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{IA__ScoreDUnCoup_8h_a06ce99d15a13ce12f26cfbfc9ebef59a}{IA\+\_\+score\+DUn\+Coup}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCoup}{Coup}} coup, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur\+\_\+referent, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur\+\_\+courant, unsigned int profondeur)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le score d\textquotesingle{}un coup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation de la fonction qui permet à l IA de calculer le score d\textquotesingle{}un coup pour le jeu d\textquotesingle{}Othello. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{IA__ScoreDUnCoup_8h_a06ce99d15a13ce12f26cfbfc9ebef59a}\label{IA__ScoreDUnCoup_8h_a06ce99d15a13ce12f26cfbfc9ebef59a}} 
+\index{IA\_ScoreDUnCoup.h@{IA\_ScoreDUnCoup.h}!IA\_scoreDUnCoup@{IA\_scoreDUnCoup}}
+\index{IA\_scoreDUnCoup@{IA\_scoreDUnCoup}!IA\_ScoreDUnCoup.h@{IA\_ScoreDUnCoup.h}}
+\doxysubsubsection{\texorpdfstring{IA\_scoreDUnCoup()}{IA\_scoreDUnCoup()}}
+{\footnotesize\ttfamily int IA\+\_\+score\+DUn\+Coup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{coup,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur\+\_\+referent,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur\+\_\+courant,  }\item[{unsigned int}]{profondeur }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le score d\textquotesingle{}un coup. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em coup} & \+: le coup joué \\
+\hline
+{\em couleur\+\_\+joueur\+\_\+courant} & \+: la couleur du joueur courant \\
+\hline
+{\em couleur\+\_\+joueur\+\_\+referent} & \+: la couleur du joueur referent \\
+\hline
+{\em profondeur} & \+: la profondeur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}

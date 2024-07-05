@@ -1,0 +1,59 @@
+\hypertarget{IA__ObtenirCoupsPossibles_8h}{}\doxysection{Référence du fichier include/\+IA\+\_\+\+Obtenir\+Coups\+Possibles.h}
+\label{IA__ObtenirCoupsPossibles_8h}\index{include/IA\_ObtenirCoupsPossibles.h@{include/IA\_ObtenirCoupsPossibles.h}}
+
+
+Implementation de la fonction qui permet à l IA d\textquotesingle{}obtenir la liste des coups qu\textquotesingle{}on peut jouer sur le plateau.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Couleur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de IA\+\_\+\+Obtenir\+Coups\+Possibles.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{IA__ObtenirCoupsPossibles_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCoups}{Coups}} \mbox{\hyperlink{IA__ObtenirCoupsPossibles_8h_aa4bb9edcfe4acb021cd35456e3ac5b7f}{IA\+\_\+obtenir\+Coups\+Possibles}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne la listes des coups jouables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation de la fonction qui permet à l IA d\textquotesingle{}obtenir la liste des coups qu\textquotesingle{}on peut jouer sur le plateau. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+11/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{IA__ObtenirCoupsPossibles_8h_aa4bb9edcfe4acb021cd35456e3ac5b7f}\label{IA__ObtenirCoupsPossibles_8h_aa4bb9edcfe4acb021cd35456e3ac5b7f}} 
+\index{IA\_ObtenirCoupsPossibles.h@{IA\_ObtenirCoupsPossibles.h}!IA\_obtenirCoupsPossibles@{IA\_obtenirCoupsPossibles}}
+\index{IA\_obtenirCoupsPossibles@{IA\_obtenirCoupsPossibles}!IA\_ObtenirCoupsPossibles.h@{IA\_ObtenirCoupsPossibles.h}}
+\doxysubsubsection{\texorpdfstring{IA\_obtenirCoupsPossibles()}{IA\_obtenirCoupsPossibles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structCoups}{Coups}} IA\+\_\+obtenir\+Coups\+Possibles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne la listes des coups jouables. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em couleur\+\_\+joueur} & \+: la couleur du joueur courant (IA) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structCoups}{Coups}} \+: la liste des coups jouables 
+\end{DoxyReturn}

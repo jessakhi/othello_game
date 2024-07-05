@@ -1,0 +1,20 @@
+\begin{algorithme}
+    
+
+\fonction{GPconvertirCoordonneeEnPosition}{coord : Tableaux[1..Max] de \caractere}{Position}
+{
+    ligne, colonne : \naturel , A , a , zero: \caractere
+}
+{  \affecter{A}{"A"}
+   \affecter{a}{"a"}
+\affecter{0}{"0"}
+    \sialorssinon{coord[1]>= 'A' et coord [1]<= 'H'}{
+     \affecter{colonne}{coord[2] - A +1}
+    }
+    {
+    \affecter{colonne}{coord[1] - a +1}
+    \affecter{ligne}{coord - zero} 
+    }
+    \retourner{TADPositionposition(ligne, colonne)}
+}
+\end{algorithme}

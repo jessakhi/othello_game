@@ -1,0 +1,28 @@
+\begin{algorithme}
+    
+\procedure{estPlein}{\paramEntreeSortie{p : Plateau}, \paramEntree{c : Coup}}
+{
+    dirLigne, dirColonne : Tableau [1..8] d'Entiers \\
+    pos : Position \\
+    i: \naturel
+}
+{
+    \affecter{dirLigne}{[-1,-1,0,1,1,1,0,-1]}
+    \affecter{dirColonne}{[0,1,1,1,0,-1,-1,-1]}
+    \affecter{pos}{obtenirPosition(c)}
+
+    \pour{i}{0}{8}{}{
+        \affecter{directionValide}{FAUX}
+        \tantque{p.lesPions(obtenirLigne(pos),obtenirColonne(pos)).estPlace et directionValide $=$ FAUX}{
+            \instruction{seDeplacerDansLaDirection(pos,dirLigne[i],dirColonne[i])}
+            \sialors{obtenirCouleur(p.lesPions(obtenirLigne(pos),obtenirColonne(pos))) $\neq$ obtenirCouleur(c)}{
+            }
+        }
+        \affecter{pos}{obtenirPosition(c)}
+        \tantque{obtenirCouleur(p.lesPions(obtenirLigne(pos),obtenirColonne(pos))) $\neq$ obtenirCouleur(c) ET directionValide $=$ VRAI}{
+            \affecter{pos}{seDeplacerDansLaDirection(pos,dirLigne[i],dirColonne[i])}
+            \instruction{changerCouleur(obtenirCouleur(p.lesPions(obtenirLigne(pos),obtenirColonne(pos))))}
+        }
+    }
+}
+\end{algorithme}

@@ -1,0 +1,34 @@
+\begin{algorithme}
+    
+
+\fonction{GP\_initialiserPlateau}{}{Plateau}
+{
+    p : Plateau
+}
+{
+    \affecter{p}{TADPlateau\_plateau()}
+    
+    \instruction{TADPlateau\_placerPion(p, TADPion\_pion(TADCouleur\_couleur(1), TADPosition\_position(3, 3)))}
+    \instruction{TADPlateau\_placerPion(p, TADPion\_pion(TADCouleur\_couleur(1), TADPosition\_position(4, 4)))}
+    \instruction{TADPlateau\_placerPion(p, TADPion\_pion(TADCouleur\_couleur(0), TADPosition\_position(3, 4)))}
+    \instruction{TADPlateau\_placerPion(p, TADPion\_pion(TADCouleur\_couleur(0), TADPosition\_position(4, 3)))}
+
+    \retourner{p}
+}
+
+\begin{comment}
+fonction GP_initialiserPlateau(): Plateau
+déclaration: p: Plateau
+
+début
+    p <- TADPlateau_plateau()
+
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(1), TADPosition_position(3, 3)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(1), TADPosition_position(4, 4)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(0), TADPosition_position(3, 4)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(0), TADPosition_position(4, 3)))
+
+    retourner p
+fin
+\end{comment}
+\end{algorithme}

@@ -1,0 +1,12 @@
+\begin{algorithme}
+     
+
+\fonction{IA\_obtenirCoupIA}{p : Plateau , couleur\_joueur\_courant : Couleur , ligne : \naturel , colonne : \caractere , profondeur : \naturel}{Coup}{ resultat : Coup , coups\_possibles : Coups , score : \naturel , meilleur\_score : \naturel , i : \naturel}{\affecter{coups\_possibles}{IA\_obtenirCoupsPossibles(p,couleur\_joueur\_courant)}
+     \affecter{resultat}{obtenirIEmeCoup(coups\_possibles,0)}
+     \affecter{meilleur\_score}{IA\_scoreDUnCoup(p,resultat,couleur\_joueur\_courant,profondeur)}
+     \pour{i}{1}{obtenirNbCoups(coups\_possibles)}{}{\affecter{score}{IA\_scoreDUnCoup(p,obtenirIEmeCoup(coups\_possibles,i),couleur\_joueur\_courant,profondeur)}
+     \sialors{score$>$meilleur\_score}{
+     \affecter{resultat}{obtenirIEmeCoup(coups\_possibles,i)}
+     \affecter{meilleur\_score}{score}}
+     }\retourner{resultat}}
+\end{algorithme}

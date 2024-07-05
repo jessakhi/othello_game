@@ -1,0 +1,13 @@
+\begin{algorithme}
+     
+
+     \fonction{IA\_obtenirCoupsPossibles}{ p : Plateau , couleur\_joueur : Couleur}{Coups}{coups\_possibles : Coups , coup : Coup , i , j : \naturel}{\affecter{coups\_possibles}{coups()} 
+     \pour{i}{1}{8}{}{
+     \pour{j}{1}{8}{}{
+     \sialors{IA\_coupValide(p, coup (pion(couleur\_joueur, position(i, j))))}{\affecter{coup}{coup(pion(couleur\_joueur, position(i, j)))}
+     \instruction{ajouterCoup(coups\_possibles, coup)}
+     }
+    \retourner{coups\_possibles}
+     }
+     }}
+\end{algorithme}

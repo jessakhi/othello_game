@@ -1,0 +1,8 @@
+ \begin{algorithme}
+    
+ \fonction{IA\_scoreDUnCoup}{p : Plateau , coup : Coup , couleur\_joueur : Couleur , profondeur : \naturel}{\naturel}{copie\_plateau2 : Plateau , copie\_plateau : Plateau }{\affecter{copie\_plateau2}{plateau()} \affecter{copie\_plateau}{copie\_plateau2}
+     \instruction{jouerCoup(copie\_plateau,coup)}
+     \sialorssinon{estPlein(copie\_plateau) et profondeur = 0}{\retourner{IA\_evaluer(copie\_plateau,couleur\_joueur)}}{\retourner{IA\_minMax(copie\_plateau,couleur\_joueur,couleur\_joueur,profondeur)}}
+     
+     }
+    \end{algorithme}

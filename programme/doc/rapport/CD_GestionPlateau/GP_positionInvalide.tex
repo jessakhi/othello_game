@@ -1,0 +1,26 @@
+\begin{algorithme}
+
+\fonction{GP\_positionInvalide}{pos : Position}{\booleen}
+{
+
+}
+{
+    \retourner  {TADPosition\_obtenirColonne(pos) < 0 OU 
+			    TADPosition\_obtenirColonne(pos) > 7 OU 
+			    TADPosition\_obtenirLigne(pos) < 0 OU 
+			    TADPosition\_obtenirLigne(pos) > 7}
+}
+
+
+\begin{comment}
+fonction GP_positionInvalide(pos: Position): Booléen
+
+début
+    retourner  (TADPosition_obtenirColonne(pos) < 0 OU
+			    TADPosition_obtenirColonne(pos) > 7 OU
+			    TADPosition_obtenirLigne(pos) < 0 OU
+			    TADPosition_obtenirLigne(pos) > 7)
+fin
+
+\end{comment}
+\end{algorithme}

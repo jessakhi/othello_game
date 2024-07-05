@@ -1,0 +1,7 @@
+ \begin{algorithme}
+ \procedure{seDeplacerDansLaDirection}{\paramEntreeSortie{pos : Position}, \paramEntree{dir : \naturel}}{dirLigne , dirColonne : Tableau [1..8] d'Entier}{
+             \affecter{dirLigne}{[-1,-1,0,1,1,1,0,-1]}
+             \affecter{dirLigne}{[{0,1,1,1,0,-1,-1,-1}]}
+             \retourner{Position\_position(Position\_obtenirLigne(pos) + dirLigne[dir] , Position\_obtenirColonne(pos) + dirColonne[dir])}
+             }
+  \end{algorithme}

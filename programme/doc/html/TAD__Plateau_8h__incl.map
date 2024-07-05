@@ -1,0 +1,7 @@
+<map id="include/TAD_Plateau.h" name="include/TAD_Plateau.h">
+<area shape="rect" id="node1" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$TAD__Pion_8h.html" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="37,80,129,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="65,229,140,256"/>
+<area shape="rect" id="node4" href="$TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="26,155,139,181"/>
+<area shape="rect" id="node5" href="$TAD__Couleur_8h.html" title="Implementation du TAD Couleur pour le jeu d&#39;Othello." alt="" coords="163,155,274,181"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="include/TAD_Coup.h" name="include/TAD_Coup.h">
+<area shape="rect" id="node1" title="Implementation du TAD Coup pour le jeu d&#39;Othello." alt="" coords="387,5,529,32"/>
+<area shape="rect" id="node2" href="$IA__CoupValide_8h.html" title="Implementation de la fonction qui permet à l IA de vérifier que un coup est bien jouable (valide)" alt="" coords="5,80,169,107"/>
+<area shape="rect" id="node3" href="$JEU__Jouer_8h.html" title="Implementation de la fonction jouer, qui permet d&#39;effectuer toutes les étapes nécéssaires à un tour d..." alt="" coords="193,80,336,107"/>
+<area shape="rect" id="node4" href="$JEU__ObtenirCoupH_8h_source.html" title=" " alt="" coords="361,80,555,107"/>
+<area shape="rect" id="node5" href="$TAD__Coups_8h.html" title="Implementation du TAD Coups pour le jeu d&#39;Othello." alt="" coords="579,80,729,107"/>
+<area shape="rect" id="node6" href="$UNIT__GestionPlateau_8h.html" title="Implementation de toutes les procédures et fonction de gestion du plateau." alt="" coords="753,80,960,107"/>
+</map>

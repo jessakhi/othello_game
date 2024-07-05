@@ -1,0 +1,4 @@
+<map id="include/JEU_SeDeplacerDansLaDirection.h" name="include/JEU_SeDeplacerDansLaDirection.h">
+<area shape="rect" id="node1" title="Implementation de la fonction seDeplacerDansLaDirection pour le jeu d&#39;Othello." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="48,95,161,121"/>
+</map>

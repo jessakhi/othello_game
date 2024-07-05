@@ -1,0 +1,8 @@
+<map id="include/IA_ObtenirCoupsPossibles.h" name="include/IA_ObtenirCoupsPossibles.h">
+<area shape="rect" id="node1" title="Implementation de la fonction qui permet à l IA d&#39;obtenir la liste des coups qu&#39;on peut jouer sur le ..." alt="" coords="35,5,269,32"/>
+<area shape="rect" id="node2" href="$TAD__Plateau_8h.html" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="50,80,161,107"/>
+<area shape="rect" id="node6" href="$TAD__Couleur_8h.html" title="Implementation du TAD Couleur pour le jeu d&#39;Othello." alt="" coords="159,229,270,256"/>
+<area shape="rect" id="node3" href="$TAD__Pion_8h.html" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="38,155,130,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="61,304,136,331"/>
+<area shape="rect" id="node5" href="$TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="22,229,135,256"/>
+</map>

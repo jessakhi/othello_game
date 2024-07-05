@@ -1,0 +1,216 @@
+\hypertarget{UNIT__GestionPlateau_8h}{}\doxysection{Référence du fichier include/\+UNIT\+\_\+\+Gestion\+Plateau.h}
+\label{UNIT__GestionPlateau_8h}\index{include/UNIT\_GestionPlateau.h@{include/UNIT\_GestionPlateau.h}}
+
+
+Implementation de toutes les procédures et fonction de gestion du plateau.  
+
+
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Couleur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Position.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Pion.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}TAD\+\_\+\+Coup.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Graphe des dépendances par inclusion de UNIT\+\_\+\+Gestion\+Plateau.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{UNIT__GestionPlateau_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPosition}{Position}} \mbox{\hyperlink{UNIT__GestionPlateau_8h_a6a92518525aa92fbe632ab25e0338309}{GP\+\_\+convertir\+Coordonnee\+En\+Position}} (char str\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction qui converti les coordonnées entrées en \mbox{\hyperlink{structPosition}{Position}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structPlateau}{Plateau}} \mbox{\hyperlink{UNIT__GestionPlateau_8h_a9d707053a3732766cabc3f6b5ac4d3f4}{GP\+\_\+initialiser\+Plateau}} ()
+\begin{DoxyCompactList}\small\item\em Fonction d\textquotesingle{}initialisation du plateau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a60937263e03bf5b681b717a7c72f401d}\label{UNIT__GestionPlateau_8h_a60937263e03bf5b681b717a7c72f401d}} 
+bool {\bfseries GP\+\_\+position\+Invalide} (\mbox{\hyperlink{structPosition}{Position}} pos)
+\item 
+bool \mbox{\hyperlink{UNIT__GestionPlateau_8h_a1e6466b46b35e2147c96fcf684fd54e6}{GP\+\_\+tour\+Jouable}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structCouleur}{Couleur}} couleur\+\_\+joueur)
+\begin{DoxyCompactList}\small\item\em permet d\textquotesingle{}indiquer si un joueur peu placer un pion ou non lorsqu\textquotesingle{}il est censé jouer \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{UNIT__GestionPlateau_8h_a44457d8dc20d0d478f5c1bec1a79d4fe}{GP\+\_\+tester\+Direction}} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structPosition}{Position}} pos, unsigned int dir, \mbox{\hyperlink{structCouleur}{Couleur}} c)
+\begin{DoxyCompactList}\small\item\em qui permet de tester si la direction est valide \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{UNIT__GestionPlateau_8h_af903aa29cca6cf41489c0480e914ba1d}{GP\+\_\+mise\+AJour\+Plateau}} (\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$p, \mbox{\hyperlink{structCoup}{Coup}} coup)
+\begin{DoxyCompactList}\small\item\em Procédure de mise à jour du plateau. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a15bf9c621bfaff23c936ca24bb2eaa29}\label{UNIT__GestionPlateau_8h_a15bf9c621bfaff23c936ca24bb2eaa29}} 
+unsigned int {\bfseries GP\+\_\+nb\+Pions\+Contigus} (\mbox{\hyperlink{structPlateau}{Plateau}} p, \mbox{\hyperlink{structPion}{Pion}} pion)
+\item 
+int \mbox{\hyperlink{UNIT__GestionPlateau_8h_a8025ffe0743552c9eda6933818ffec28}{GP\+\_\+max}} (int nb1, int nb2)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le maximum de deux entiers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{UNIT__GestionPlateau_8h_ad025ae9be3cb0f626eaa8899b8e43539}{GP\+\_\+min}} (int nb1, int nb2)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le minimum de deux entiers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{UNIT__GestionPlateau_8h_a2c4fd0929a6989911b3c8c6792968bba}{GP\+\_\+afficher\+Plateau}} (\mbox{\hyperlink{structPlateau}{Plateau}} p)
+\begin{DoxyCompactList}\small\item\em Procédure qui affiche le plateau. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Implementation de toutes les procédures et fonction de gestion du plateau. 
+
+\begin{DoxyAuthor}{Auteur}
+Charles Foyer Benchekroun Essakhi 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+22/12/2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a2c4fd0929a6989911b3c8c6792968bba}\label{UNIT__GestionPlateau_8h_a2c4fd0929a6989911b3c8c6792968bba}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_afficherPlateau@{GP\_afficherPlateau}}
+\index{GP\_afficherPlateau@{GP\_afficherPlateau}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_afficherPlateau()}{GP\_afficherPlateau()}}
+{\footnotesize\ttfamily void GP\+\_\+afficher\+Plateau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Procédure qui affiche le plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le \mbox{\hyperlink{structPlateau}{Plateau}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a6a92518525aa92fbe632ab25e0338309}\label{UNIT__GestionPlateau_8h_a6a92518525aa92fbe632ab25e0338309}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_convertirCoordonneeEnPosition@{GP\_convertirCoordonneeEnPosition}}
+\index{GP\_convertirCoordonneeEnPosition@{GP\_convertirCoordonneeEnPosition}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_convertirCoordonneeEnPosition()}{GP\_convertirCoordonneeEnPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPosition}{Position}} GP\+\_\+convertir\+Coordonnee\+En\+Position (\begin{DoxyParamCaption}\item[{char}]{str\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction qui converti les coordonnées entrées en \mbox{\hyperlink{structPosition}{Position}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coord} & \+: les coordonnées \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPosition}{Position}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a9d707053a3732766cabc3f6b5ac4d3f4}\label{UNIT__GestionPlateau_8h_a9d707053a3732766cabc3f6b5ac4d3f4}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_initialiserPlateau@{GP\_initialiserPlateau}}
+\index{GP\_initialiserPlateau@{GP\_initialiserPlateau}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_initialiserPlateau()}{GP\_initialiserPlateau()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPlateau}{Plateau}} GP\+\_\+initialiser\+Plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction d\textquotesingle{}initialisation du plateau. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPlateau}{Plateau}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a8025ffe0743552c9eda6933818ffec28}\label{UNIT__GestionPlateau_8h_a8025ffe0743552c9eda6933818ffec28}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_max@{GP\_max}}
+\index{GP\_max@{GP\_max}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_max()}{GP\_max()}}
+{\footnotesize\ttfamily int GP\+\_\+max (\begin{DoxyParamCaption}\item[{int}]{nb1,  }\item[{int}]{nb2 }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le maximum de deux entiers. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb1} & \+: un entier \\
+\hline
+{\em nb2} & \+: un autre entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_ad025ae9be3cb0f626eaa8899b8e43539}\label{UNIT__GestionPlateau_8h_ad025ae9be3cb0f626eaa8899b8e43539}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_min@{GP\_min}}
+\index{GP\_min@{GP\_min}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_min()}{GP\_min()}}
+{\footnotesize\ttfamily int GP\+\_\+min (\begin{DoxyParamCaption}\item[{int}]{nb1,  }\item[{int}]{nb2 }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le minimum de deux entiers. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb1} & \+: un entier \\
+\hline
+{\em nb2} & \+: un autre entier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_af903aa29cca6cf41489c0480e914ba1d}\label{UNIT__GestionPlateau_8h_af903aa29cca6cf41489c0480e914ba1d}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_miseAJourPlateau@{GP\_miseAJourPlateau}}
+\index{GP\_miseAJourPlateau@{GP\_miseAJourPlateau}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_miseAJourPlateau()}{GP\_miseAJourPlateau()}}
+{\footnotesize\ttfamily void GP\+\_\+mise\+AJour\+Plateau (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{structCoup}{Coup}}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Procédure de mise à jour du plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le \mbox{\hyperlink{structPlateau}{Plateau}} \\
+\hline
+{\em coup} & \+: le coup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a44457d8dc20d0d478f5c1bec1a79d4fe}\label{UNIT__GestionPlateau_8h_a44457d8dc20d0d478f5c1bec1a79d4fe}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_testerDirection@{GP\_testerDirection}}
+\index{GP\_testerDirection@{GP\_testerDirection}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_testerDirection()}{GP\_testerDirection()}}
+{\footnotesize\ttfamily bool GP\+\_\+tester\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structPosition}{Position}}}]{pos,  }\item[{unsigned int}]{dir,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+qui permet de tester si la direction est valide 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em pos} & \+: la position \\
+\hline
+{\em dir} & \+: la direction \\
+\hline
+{\em c} & \+: la couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{UNIT__GestionPlateau_8h_a1e6466b46b35e2147c96fcf684fd54e6}\label{UNIT__GestionPlateau_8h_a1e6466b46b35e2147c96fcf684fd54e6}} 
+\index{UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}!GP\_tourJouable@{GP\_tourJouable}}
+\index{GP\_tourJouable@{GP\_tourJouable}!UNIT\_GestionPlateau.h@{UNIT\_GestionPlateau.h}}
+\doxysubsubsection{\texorpdfstring{GP\_tourJouable()}{GP\_tourJouable()}}
+{\footnotesize\ttfamily bool GP\+\_\+tour\+Jouable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structPlateau}{Plateau}}}]{p,  }\item[{\mbox{\hyperlink{structCouleur}{Couleur}}}]{couleur\+\_\+joueur }\end{DoxyParamCaption})}
+
+
+
+permet d\textquotesingle{}indiquer si un joueur peu placer un pion ou non lorsqu\textquotesingle{}il est censé jouer 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & \+: le plateau \\
+\hline
+{\em couleur\+\_\+joueur} & \+: la couleur du joueur courant\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool 
+\end{DoxyReturn}

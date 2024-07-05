@@ -1,0 +1,35 @@
+\begin{algorithme}
+\procedure{JEU\_faireUnePartie}{\paramEntree couleur\_chosie : Couleur}{p : Plateau , profondeur : \naturel , vainqueur ; Couleur , egalite: \booleen , nb\_tour : \naturel , couleur\_joueur\_humain , couleur\_joueur\_courant : Couleur , ligne : \naturel , colonne : \caractere , str : Tableau[1..2] de \caractere }{\affecter{nb\_tour}{0}
+            \affecter{couleur\_joueur\_humain}{couleur\_choisie}
+            \affecter{couleur\_joueur\_courant}{couleur\_joueur\_humain}
+            \affecter{p}{ GP\_initialiserPlateau()}
+            \instruction{IHM\_gras("Vous commencez !")}
+    \instruction{IHM\_gras("Avec quelle profondeur voulez vous que l'IA joue ?")}
+    \lire{profondeur}
+    \tantque{non JEU\_testerFin(p)}{\affecter{nb\_tour}{nb\_tour + 1}
+    \instruction{IHM\_separateur()}
+    \instruction{GP\_afficherPlateau(p)}
+    \sialorssinon{couleursIdentiques(couleur\_joueur\_courant,couleur\_joueur\_humain)}{ 
+    \instruction{IHM\_gras("À vous de jouer !\")}
+    {\repeter{
+    \instruction{IHM\_gras("Quel coup voulez-vous jouer ? Entrez une lettre suivie d'un chiffre :  ")} 
+    \lire{str}
+    \affecter{ligne}{str[1]}
+    \affecter{colonne}{str[0]}
+      \sialors{non IA\_coupValide(p,coup(pion(couleur\_joueur\_humain,position(ligne,colonne))))}{\instruction{IHM\_gras("Coup non valide, réessayez !")}}
+      }
+    {\instruction{IA\_coupValide(p,coup(TADPion\_pion(couleur\_joueur\_humain ,Position\_position(ligne,colonne)))))}}}
+    \instruction{JEU\_jouer(p,couleur\_joueur\_courant,JEU\_obtenirCoupH,ligne,colonne,3)}
+}{
+\instruction{JEU\_jouer(p,couleur\_joueur\_courant, IA\_obtenirCoupIA,0,0,profondeur)}}
+\affecter{couleur\_joueur\_courant}{couleurOpposee(couleur\_joueur\_courant)}
+            }\instruction{IHM\_gras("La partie est terminée ! ")}
+            \affecter{egalite}{JEU\_trouverEgalite(p)}
+              \sialorssinon{ non egalite}{
+              \affecter{vainqueur
+              }{JEU\_trouverVainqueur(p)}
+              \ecrire{" Le vainqueur est la couleur",obtenircouleur(vainqueur))}}
+              {\instruction{GP\_afficherPlateau(p)}
+              \ecrire{"Pas de vainqueur !"}}
+}
+\end{algorithme}

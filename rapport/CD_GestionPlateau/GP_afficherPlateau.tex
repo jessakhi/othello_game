@@ -1,0 +1,49 @@
+\begin{algorithme}
+\procedure{GP\_afficherPlateau}{p : Plateau}
+{
+    i, j : \naturel
+}
+{
+    \instruction{retourALaLigne()}
+    \ecrire{"    A B C D E F G H"}
+    \instruction{retourALaLigne()}
+    \pour{i}{0}{8}{}{
+        \ecrire{i+1, "   "}
+        \pour{j}{0}{8}{}{
+            \sialorssinon{TADPlateau\_obtenirPion(p, TADPosition\_position(i,j)).estPlace}
+            {
+                \ecrire{TADPion\_obtenirCouleur(TADPlateau\_obtenirPion(p, TADPosition\_position(i,j))).couleur}
+            }
+            {
+                \ecrire("- ")
+            }
+        }
+        \instruction{retourALaLigne()}
+    }
+    \instruction{retourALaLigne()}
+}
+
+\begin{comment}
+procédure GP_afficherPlateau(p: Plateau)
+déclaration: i, j: Naturel
+
+début
+    retourALaLigne()
+    afficher("    A B C D E F G H")
+    retourALaLigne()
+    pour i allant de 0 à 8 faire:
+        afficher(i+1, "   ")
+        pour j allant de 0 à 8 faire:
+            si TADPlateau_obtenirPion(p, TADPosition_position(i,j)).estPlace
+                afficher(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, TADPosition_position(i,j))).couleur)
+            sinon:
+                afficher("- ")
+            fin si
+        fin pour
+        retourALaLigne()
+    fin pour
+    retourALaLigne()
+fin
+
+\end{comment}
+\end{algorithme}

@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello: Référence du fichier include/TAD_Coups.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier TAD_Coups.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementation du TAD <a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> pour le jeu d'Othello.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="TAD__Coup_8h_source.html">TAD_Coup.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de TAD_Coups.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="TAD__Coups_8h__incl.png" border="0" usemap="#ainclude_2TAD__Coups_8h" alt=""/></div>
+<map name="ainclude_2TAD__Coups_8h" id="ainclude_2TAD__Coups_8h">
+<area shape="rect" title="Implementation du TAD Coups pour le jeu d&#39;Othello." alt="" coords="5,5,155,32"/>
+<area shape="rect" href="TAD__Coup_8h.html" title="Implementation du TAD Coup pour le jeu d&#39;Othello." alt="" coords="31,80,129,107"/>
+<area shape="rect" href="TAD__Pion_8h.html" title="Implementation du TAD Pion pour le jeu d&#39;Othello." alt="" coords="34,229,126,256"/>
+<area shape="rect" href="TAD__Plateau_8h.html" title="Implementation du TAD Plateau pour le jeu d&#39;Othello." alt="" coords="71,155,182,181"/>
+<area shape="rect" title=" " alt="" coords="63,379,137,405"/>
+<area shape="rect" href="TAD__Position_8h.html" title="Implementation du TAD Position pour le jeu d&#39;Othello." alt="" coords="23,304,137,331"/>
+<area shape="rect" href="TAD__Couleur_8h.html" title="Implementation du TAD Couleur pour le jeu d&#39;Othello." alt="" coords="161,304,271,331"/>
+</map>
+</div>
+</div>
+<p><a href="TAD__Coups_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structNcoups.html">Ncoups</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type <a class="el" href="structNcoups.html" title="Le type Ncoups est un noeud de coups qui sera utilisé pour representer le type ListeCoups.">Ncoups</a> est un noeud de coups qui sera utilisé pour representer le type ListeCoups.  <a href="structNcoups.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCoups.html">Coups</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type <a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> est une Liste de coups <br  />
+  <a href="structCoups.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a96c72ce298774629ab335a691f54b891"><td class="memItemLeft" align="right" valign="top"><a id="a96c72ce298774629ab335a691f54b891"></a>
+typedef struct <a class="el" href="structNcoups.html">Ncoups</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a></td></tr>
+<tr class="memdesc:a96c72ce298774629ab335a691f54b891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type ListesCoups est un pointeur sur des noeud de coups. <br /></td></tr>
+<tr class="separator:a96c72ce298774629ab335a691f54b891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf515da1408ccf5dc816ff816df2536f"><td class="memItemLeft" align="right" valign="top"><a id="abf515da1408ccf5dc816ff816df2536f"></a>
+typedef struct <a class="el" href="structNcoups.html">Ncoups</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#abf515da1408ccf5dc816ff816df2536f">Ncoups</a></td></tr>
+<tr class="memdesc:abf515da1408ccf5dc816ff816df2536f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type <a class="el" href="structNcoups.html" title="Le type Ncoups est un noeud de coups qui sera utilisé pour representer le type ListeCoups.">Ncoups</a> est un noeud de coups qui sera utilisé pour representer le type ListeCoups. <br /></td></tr>
+<tr class="separator:abf515da1408ccf5dc816ff816df2536f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aa2452a62031d3c5d9a00645c83edfe9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#aa2452a62031d3c5d9a00645c83edfe9e">ListeCoups_ajouterCoup</a> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *liste_coups, <a class="el" href="structCoup.html">Coup</a> c)</td></tr>
+<tr class="memdesc:aa2452a62031d3c5d9a00645c83edfe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure d'ajout d'un coup à une liste de coups.  <a href="TAD__Coups_8h.html#aa2452a62031d3c5d9a00645c83edfe9e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa2452a62031d3c5d9a00645c83edfe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b48bd4f4143134628692eb4e9d0f64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#ad6b48bd4f4143134628692eb4e9d0f64">ListeCoups_supprimerCoup</a> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *liste_coups)</td></tr>
+<tr class="memdesc:ad6b48bd4f4143134628692eb4e9d0f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure de suppression de coups.  <a href="TAD__Coups_8h.html#ad6b48bd4f4143134628692eb4e9d0f64">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad6b48bd4f4143134628692eb4e9d0f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a711c029f1cf5d3016f809ef3bd117bae"><td class="memItemLeft" align="right" valign="top"><a id="a711c029f1cf5d3016f809ef3bd117bae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ListeCoups_supprimerIEmeCoupRecursif</b> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *liste_coups, unsigned int i)</td></tr>
+<tr class="separator:a711c029f1cf5d3016f809ef3bd117bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11e25fba93f79867c6a434bf5c795f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoup.html">Coup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#aa11e25fba93f79867c6a434bf5c795f5">ListeCoups_obtenirCoup</a> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> liste_coups)</td></tr>
+<tr class="memdesc:aa11e25fba93f79867c6a434bf5c795f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui retourne un coup.  <a href="TAD__Coups_8h.html#aa11e25fba93f79867c6a434bf5c795f5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa11e25fba93f79867c6a434bf5c795f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00682a9a1b199446ae8b2ab882ff09d"><td class="memItemLeft" align="right" valign="top"><a id="af00682a9a1b199446ae8b2ab882ff09d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ListeCoups_fixerCoup</b> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *liste_coups, <a class="el" href="structCoup.html">Coup</a> c)</td></tr>
+<tr class="separator:af00682a9a1b199446ae8b2ab882ff09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af59aeedc011ff5db0300434c7f68a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a8af59aeedc011ff5db0300434c7f68a0">ListeCoups_obtenirListeSuivante</a> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> liste_coups)</td></tr>
+<tr class="memdesc:a8af59aeedc011ff5db0300434c7f68a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'obtenir la liste suivante de coups.  <a href="TAD__Coups_8h.html#a8af59aeedc011ff5db0300434c7f68a0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8af59aeedc011ff5db0300434c7f68a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1c8c6d9670eade867b4faed015de46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a3f1c8c6d9670eade867b4faed015de46">ListeCoups_fixerListeSuivante</a> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> liste_coups, <a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> liste_coups_suivante)</td></tr>
+<tr class="memdesc:a3f1c8c6d9670eade867b4faed015de46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure qui fixe la liste suivante.  <a href="TAD__Coups_8h.html#a3f1c8c6d9670eade867b4faed015de46">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3f1c8c6d9670eade867b4faed015de46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1605ba44450518076d1da477f495ddb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoups.html">Coups</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a1605ba44450518076d1da477f495ddb2">TADCoups_coups</a> ()</td></tr>
+<tr class="memdesc:a1605ba44450518076d1da477f495ddb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui creer un historique de <a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> vide.  <a href="TAD__Coups_8h.html#a1605ba44450518076d1da477f495ddb2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1605ba44450518076d1da477f495ddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bc957ae91b6152d8ae21a4932582f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a9bc957ae91b6152d8ae21a4932582f1f">TADCoups_fixerNbCoups</a> (<a class="el" href="structCoups.html">Coups</a> *coups, unsigned int nb_coups)</td></tr>
+<tr class="memdesc:a9bc957ae91b6152d8ae21a4932582f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure qui fixe le nombre de coups.  <a href="TAD__Coups_8h.html#a9bc957ae91b6152d8ae21a4932582f1f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9bc957ae91b6152d8ae21a4932582f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2b1f8d79b36169d588537bba719661"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#aca2b1f8d79b36169d588537bba719661">TADCoups_obtenirNbCoups</a> (<a class="el" href="structCoups.html">Coups</a> coups)</td></tr>
+<tr class="memdesc:aca2b1f8d79b36169d588537bba719661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure qui permet d'obtenir le nombre de coups contenus dans un '<a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a>'.  <a href="TAD__Coups_8h.html#aca2b1f8d79b36169d588537bba719661">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca2b1f8d79b36169d588537bba719661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e43cd507db95f020bf2a7a4df997072"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a2e43cd507db95f020bf2a7a4df997072">TADCoups_fixerListeCoups</a> (<a class="el" href="structCoups.html">Coups</a> *coups, <a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> l)</td></tr>
+<tr class="memdesc:a2e43cd507db95f020bf2a7a4df997072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure qui fixe lea liste de coups dans l historique de coups.  <a href="TAD__Coups_8h.html#a2e43cd507db95f020bf2a7a4df997072">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e43cd507db95f020bf2a7a4df997072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac3da950b9fc7ef4b8dbec5d05855fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#a8ac3da950b9fc7ef4b8dbec5d05855fa">TADCoups_obtenirListeCoups</a> (<a class="el" href="structCoups.html">Coups</a> *coups)</td></tr>
+<tr class="memdesc:a8ac3da950b9fc7ef4b8dbec5d05855fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui permet d'obtenir la liste des coups contenu dans un "coups".  <a href="TAD__Coups_8h.html#a8ac3da950b9fc7ef4b8dbec5d05855fa">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8ac3da950b9fc7ef4b8dbec5d05855fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9cd377a2d09a2e047e6fa59961405d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#ad9cd377a2d09a2e047e6fa59961405d7">TADCoups_ajouterCoup</a> (<a class="el" href="structCoups.html">Coups</a> *coups, <a class="el" href="structCoup.html">Coup</a> coup)</td></tr>
+<tr class="memdesc:ad9cd377a2d09a2e047e6fa59961405d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui ajoute un coup a l'historique de coups.  <a href="TAD__Coups_8h.html#ad9cd377a2d09a2e047e6fa59961405d7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9cd377a2d09a2e047e6fa59961405d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4590612963ae49773919e20dc6c6564"><td class="memItemLeft" align="right" valign="top"><a id="ad4590612963ae49773919e20dc6c6564"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>TADCoups_estVide</b> (<a class="el" href="structCoups.html">Coups</a> coups)</td></tr>
+<tr class="separator:ad4590612963ae49773919e20dc6c6564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c50bc8c28adfaa117b6e0c61e892de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoup.html">Coup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="TAD__Coups_8h.html#af2c50bc8c28adfaa117b6e0c61e892de">TADCoups_obtenirIEmeCoup</a> (<a class="el" href="structCoups.html">Coups</a> coups, unsigned int i)</td></tr>
+<tr class="memdesc:af2c50bc8c28adfaa117b6e0c61e892de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui ajoute un coup a l'historique de coups à l indice i.  <a href="TAD__Coups_8h.html#af2c50bc8c28adfaa117b6e0c61e892de">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af2c50bc8c28adfaa117b6e0c61e892de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeec41c97a6064385fe1b4e17bf31b6f"><td class="memItemLeft" align="right" valign="top"><a id="afeec41c97a6064385fe1b4e17bf31b6f"></a>
+<a class="el" href="structCoup.html">Coup</a>&#160;</td><td class="memItemRight" valign="bottom"><b>TADCoups_obtenirIEmeCoupRecursif</b> (<a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> liste_coups, unsigned int i)</td></tr>
+<tr class="separator:afeec41c97a6064385fe1b4e17bf31b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implementation du TAD <a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> pour le jeu d'Othello. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Charles Foyer Benchekroun Essakhi </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>11/12/2022 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="aa2452a62031d3c5d9a00645c83edfe9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2452a62031d3c5d9a00645c83edfe9e">&#9670;&nbsp;</a></span>ListeCoups_ajouterCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeCoups_ajouterCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *&#160;</td>
+          <td class="paramname"><em>liste_coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure d'ajout d'un coup à une liste de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*liste_coups</td><td>: la liste de coups </td></tr>
+    <tr><td class="paramname">c</td><td>: le coup à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a3f1c8c6d9670eade867b4faed015de46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1c8c6d9670eade867b4faed015de46">&#9670;&nbsp;</a></span>ListeCoups_fixerListeSuivante()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeCoups_fixerListeSuivante </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td>
+          <td class="paramname"><em>liste_coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td>
+          <td class="paramname"><em>liste_coups_suivante</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure qui fixe la liste suivante. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liste_coups</td><td>: la liste de coups </td></tr>
+    <tr><td class="paramname">liste_coups_suivante</td><td>la liste à fixer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="aa11e25fba93f79867c6a434bf5c795f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11e25fba93f79867c6a434bf5c795f5">&#9670;&nbsp;</a></span>ListeCoups_obtenirCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCoup.html">Coup</a> ListeCoups_obtenirCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td>
+          <td class="paramname"><em>liste_coups</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui retourne un coup. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*liste_coup</td><td>: la liste de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structCoup.html" title="Le type Coup est un pion.">Coup</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8af59aeedc011ff5db0300434c7f68a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af59aeedc011ff5db0300434c7f68a0">&#9670;&nbsp;</a></span>ListeCoups_obtenirListeSuivante()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> ListeCoups_obtenirListeSuivante </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td>
+          <td class="paramname"><em>liste_coups</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'obtenir la liste suivante de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liste_coups</td><td>: la liste de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ListeCoups </dd></dl>
+
+</div>
+</div>
+<a id="ad6b48bd4f4143134628692eb4e9d0f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b48bd4f4143134628692eb4e9d0f64">&#9670;&nbsp;</a></span>ListeCoups_supprimerCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ListeCoups_supprimerCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a> *&#160;</td>
+          <td class="paramname"><em>liste_coups</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure de suppression de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*liste_coups</td><td>: la liste de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ad9cd377a2d09a2e047e6fa59961405d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9cd377a2d09a2e047e6fa59961405d7">&#9670;&nbsp;</a></span>TADCoups_ajouterCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TADCoups_ajouterCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a> *&#160;</td>
+          <td class="paramname"><em>coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui ajoute un coup a l'historique de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique </td></tr>
+    <tr><td class="paramname">coup</td><td>: le coup </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1605ba44450518076d1da477f495ddb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1605ba44450518076d1da477f495ddb2">&#9670;&nbsp;</a></span>TADCoups_coups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCoups.html">Coups</a> TADCoups_coups </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui creer un historique de <a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> vide. </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2e43cd507db95f020bf2a7a4df997072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e43cd507db95f020bf2a7a4df997072">&#9670;&nbsp;</a></span>TADCoups_fixerListeCoups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TADCoups_fixerListeCoups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a> *&#160;</td>
+          <td class="paramname"><em>coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure qui fixe lea liste de coups dans l historique de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique de coups </td></tr>
+    <tr><td class="paramname">nb_coups</td><td>le nombre de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a9bc957ae91b6152d8ae21a4932582f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc957ae91b6152d8ae21a4932582f1f">&#9670;&nbsp;</a></span>TADCoups_fixerNbCoups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TADCoups_fixerNbCoups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a> *&#160;</td>
+          <td class="paramname"><em>coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>nb_coups</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure qui fixe le nombre de coups. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique de coups </td></tr>
+    <tr><td class="paramname">nb_coups</td><td>le nombre de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="af2c50bc8c28adfaa117b6e0c61e892de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2c50bc8c28adfaa117b6e0c61e892de">&#9670;&nbsp;</a></span>TADCoups_obtenirIEmeCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCoup.html">Coup</a> TADCoups_obtenirIEmeCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a>&#160;</td>
+          <td class="paramname"><em>coups</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui ajoute un coup a l'historique de coups à l indice i. </p>
+<p>Fonction qui ajoute un coup a la liste de couos à l indice i recursivement.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique </td></tr>
+    <tr><td class="paramname">i</td><td>: l'indice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a></dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">liste_coups</td><td>: liste des coups </td></tr>
+    <tr><td class="paramname">i</td><td>: l'indice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8ac3da950b9fc7ef4b8dbec5d05855fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac3da950b9fc7ef4b8dbec5d05855fa">&#9670;&nbsp;</a></span>TADCoups_obtenirListeCoups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="TAD__Coups_8h.html#a96c72ce298774629ab335a691f54b891">ListeCoups</a>* TADCoups_obtenirListeCoups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a> *&#160;</td>
+          <td class="paramname"><em>coups</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui permet d'obtenir la liste des coups contenu dans un "coups". </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique de coups dont on veut la liste </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ListeCoups </dd></dl>
+
+</div>
+</div>
+<a id="aca2b1f8d79b36169d588537bba719661"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2b1f8d79b36169d588537bba719661">&#9670;&nbsp;</a></span>TADCoups_obtenirNbCoups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int TADCoups_obtenirNbCoups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoups.html">Coups</a>&#160;</td>
+          <td class="paramname"><em>coups</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure qui permet d'obtenir le nombre de coups contenus dans un '<a class="el" href="structCoups.html" title="Le type Coups est une Liste de coups">Coups</a>'. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coups</td><td>: l'historique de coups </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

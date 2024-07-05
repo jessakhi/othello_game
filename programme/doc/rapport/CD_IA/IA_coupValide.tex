@@ -1,0 +1,13 @@
+
+               \fonction{IA\_coupValide}{p : Plateau , coup : Coup}{\booleen}{pos : Position , resultat : \booleen , i: \naturel}{
+               \affecter{pos}{obtenirPosition(obtenirPion(coup)}
+               \affecter{resultat}{0}
+               \affecter{i}{1}
+               \sialorssinon{obtenirPion(p,coup.pion.position).estPlace et positionInvalide(pos)}{
+               \affecter{resultat}{Faux}}{
+               \tantque{non resultat et i$\leq$8}{
+               \affecter{resultat}{testerDirection(p, pos, i, coup.pion.couleur)}
+               \affecter{i}{i+1}}
+               }
+               \retourner{resultat}
+               }

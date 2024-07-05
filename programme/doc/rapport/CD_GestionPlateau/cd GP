@@ -1,0 +1,171 @@
+fonction GP_convertirCoordonneeEnPosition(coord: chaine de caractères): Position
+déclaration: ligne, colonne: Naturel
+
+début
+
+
+    si alors:
+
+    sinon:
+
+    fin si
+
+    retourner TADPosition_position(ligne, colonne)
+fin
+
+
+procédure GP_afficherPlateau(p: Plateau)
+déclaration: i, j: Naturel
+
+début
+    retourALaLigne()
+    afficher("    A B C D E F G H")
+    retourALaLigne()
+    pour i allant de 0 à 8 faire:
+        afficher(i+1, "   ")
+        pour j allant de 0 à 8 faire:
+            si TADPlateau_obtenirPion(p, TADPosition_position(i,j)).estPlace
+                afficher(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, TADPosition_position(i,j))).couleur)
+            sinon:
+                afficher("- ")
+            fin si
+        fin pour
+        retourALaLigne()
+    fin pour
+    retourALaLigne()
+fin
+
+
+fonction GP_initialiserPlateau(): Plateau
+déclaration: p: Plateau
+
+début
+    p <- TADPlateau_plateau()
+
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(1), TADPosition_position(3, 3)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(1), TADPosition_position(4, 4)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(0), TADPosition_position(3, 4)))
+	TADPlateau_placerPion(p, TADPion_pion(TADCouleur_couleur(0), TADPosition_position(4, 3)))
+
+    retourner p
+fin
+
+
+fonction GP_positionInvalide(pos: Position): Booléen
+
+début
+    retourner  (TADPosition_obtenirColonne(pos) < 0 OU
+			    TADPosition_obtenirColonne(pos) > 7 OU
+			    TADPosition_obtenirLigne(pos) < 0 OU
+			    TADPosition_obtenirLigne(pos) > 7)
+fin
+
+
+fonction GP_tourJouable(p: Plateau, couleur_joueur: Couleur): Booléen
+déclaration: i, j, dir: Naturel
+
+début
+    pour i allant de 0 à 8 faire:
+        pour j allant de 0 à 8 faire:
+            si NON TADPlateau_obtenirPion(p, TADPosition_position(i, j)).estPlace alors:
+                pour dir allant de 0 à 8:
+                    si GP_testerDirection(p, TADPosition_position(i, j), dir, couleur_joueur):
+                        retourner VRAI
+                    fin si
+                fin pour
+            fin si
+        fin pour
+    fin pour
+    retourner FAUX
+fin
+
+
+fonction GP_testerDirection(p: Plateau, pos: Position, dir: Naturel, couleur_joueur: Couleur): Booléen
+déclaration: directionValide: Booléen
+
+début
+    directionValide <- FAUX
+
+    faire
+        pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+        si GP_positionInvalide(pos) alors:
+            retourner FAUX
+        sinon:
+            si TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) ET TADPlateau_obtenirPion(p, pos).estPlace
+                retourner FAUX
+            sinon:
+                si NON TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) && TADPlateau_obtenirPion(p, pos).estPlace
+                    tant que TADPlateau_obtenirPion(p, pos).estPlace && !directionValide && !GP_positionInvalide(pos) faire:
+                        pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+                        si(GP_positionInvalide(pos)) alors:
+                            retourner FAUX
+                        fin si
+                        si TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)), couleur_joueur) && TADPlateau_obtenirPion(p, pos).estPlace
+                            directionValide <- VRAI
+                        fin si
+                    fin tant que
+                fin si
+            fin si
+        fin si
+    tant que TADPlateau_obtenirPion(p, pos).estPlace ET NON directionValide
+
+    retourner directionValide
+fin
+
+
+procédure GP_miseAJourPlateau(E/S p: Plateau, E coup: Coup)
+déclaration: pos: Position, dir: Naturel, pion: Pion
+
+début
+    pour dir allant de 0 à 8 faire:
+		pos <- TADPion_obtenirPosition(TADCoup_obtenirPion(coup))
+		directionValide <- GP_testerDirection(p, pos, dir, TADPion_obtenirCouleur(TADCoup_obtenirPion(coup)))
+        
+        si directionValide alors:
+            pos = JEU_seDeplacerDansLaDirection(pos, dir)
+            tant que non TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)),TADPion_obtenirCouleur(coup.pion)) ET TADPlateau_obtenirPion(p, pos).estPlace faire:
+                pion <- TADPlateau_obtenirPion(p,pos)
+				TADPion_changerCouleur(pion)
+				TADPlateau_placerPion(p, pion)
+                pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+            fin tant que
+        fin si
+    fin pour
+fin
+
+
+fonction GP_max(nb1, nb2: Entier): Entier
+
+début
+    si nb1>nb2 alors:
+        retourner nb1
+    sinon:
+        retourner nb2
+    fin si
+fin
+
+
+fonction GP_min(nb1, nb2: Entier): Entier
+
+début
+    si nb1<nb2 alors:
+        retourner nb1
+    sinon:
+        retourner nb2
+    fin si
+fin
+
+
+fonction GP_nbPionsContigus(p: Plateau, pion: Pion): Naturel
+déclaration: résultat, dir: Naturel, directionValide: Booléen, pos: Position
+
+début
+    pour dir allant de 0 à 8 faire:
+        directionValide <- GP_testerDirection(p, pos, dir, TADPion_obtenirCouleur(pion))
+        tant que NON !TADCouleur_couleursIdentiques(TADPion_obtenirCouleur(TADPlateau_obtenirPion(p, pos)),TADPion_obtenirCouleur(pion))) ET directionValide
+            pos <- JEU_seDeplacerDansLaDirection(pos, dir)
+            resultat <- resultat + 1
+        fin tant que
+    fin pour
+    retourner resultat
+fin
